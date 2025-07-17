@@ -1,0 +1,137 @@
+[gd_scene load_steps=10 format=3 uid="uid://c07llmbcxjibq"]
+
+[ext_resource type="Texture2D" uid="uid://txn7oi84wqbr" path="res://Isaac templete.png" id="1_88gup"]
+[ext_resource type="Script" uid="uid://q8sq0r5p6avn" path="res://room.gd" id="1_bisa2"]
+[ext_resource type="Script" uid="uid://bki0krfxmapwn" path="res://player.gd" id="3_v5vuv"]
+[ext_resource type="Texture2D" uid="uid://bq7jsh75yit8b" path="res://icon.svg" id="4_ka7wq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bisa2"]
+size = Vector2(63, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o3f6"]
+size = Vector2(186, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5vuv"]
+size = Vector2(140, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ka7wq"]
+size = Vector2(46.5, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5k2b"]
+size = Vector2(46, 42)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_bisa2")
+
+[node name="IsaacTemplete" type="Sprite2D" parent="."]
+position = Vector2(642, 372)
+texture = ExtResource("1_88gup")
+
+[node name="North Wall" type="StaticBody2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+collision_mask = 2
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="IsaacTemplete/North Wall"]
+position = Vector2(396, -73)
+scale = Vector2(0.954477, 1)
+polygon = PackedVector2Array(862.252, 123, -327.928, 121, 244.113, 140)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="IsaacTemplete/North Wall"]
+position = Vector2(632, -2.38419e-07)
+scale = Vector2(0.954477, 1)
+polygon = PackedVector2Array(567.239, 108, 625.473, 52, 133.057, 75, 115.246, 109)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="IsaacTemplete/North Wall"]
+position = Vector2(-0.177303, 0)
+scale = Vector2(0.976974, 1)
+polygon = PackedVector2Array(538.579, 75, 567.239, 107, 117.892, 107, 50.3364, 47)
+
+[node name="West Wall" type="StaticBody2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="IsaacTemplete/West Wall"]
+position = Vector2(-67, 859)
+rotation = -1.57533
+scale = Vector2(0.911027, 1)
+polygon = PackedVector2Array(881.949, 116.644, 215.685, 111.892, 565.736, 133.338)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="IsaacTemplete/West Wall"]
+position = Vector2(60, 247)
+polygon = PackedVector2Array(50, -134, 54, 51, 5, 20, -15, -196)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="IsaacTemplete/West Wall"]
+position = Vector2(63, 559)
+polygon = PackedVector2Array(50, -181, 46, 64, -18, 110, 7, -162)
+
+[node name="East Wall" type="StaticBody2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="IsaacTemplete/East Wall"]
+polygon = PackedVector2Array(1226, 669, 1169, 618, 1165, 375, 1199, 391)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="IsaacTemplete/East Wall"]
+polygon = PackedVector2Array(1222, 64, 1166, 115, 1167, 274, 1202, 249)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="IsaacTemplete/East Wall"]
+polygon = PackedVector2Array(1227, 55, 1202, 316, 1227, 673)
+
+[node name="South Wall" type="StaticBody2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="IsaacTemplete/South Wall"]
+polygon = PackedVector2Array(57, 676, 547, 648, 566, 627, 116, 623)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="IsaacTemplete/South Wall"]
+polygon = PackedVector2Array(705, 628, 1166, 623, 1215, 673, 723, 648)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="IsaacTemplete/South Wall"]
+polygon = PackedVector2Array(55, 672, 626, 654, 1207, 671)
+
+[node name="West Door" type="Area2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+script = ExtResource("1_bisa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IsaacTemplete/West Door"]
+position = Vector2(97.5, 334)
+shape = SubResource("RectangleShape2D_bisa2")
+
+[node name="North Door" type="Area2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+script = ExtResource("1_bisa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IsaacTemplete/North Door"]
+position = Vector2(648, 97)
+shape = SubResource("RectangleShape2D_4o3f6")
+
+[node name="East Door" type="Area2D" parent="IsaacTemplete"]
+position = Vector2(-642, -372)
+script = ExtResource("1_bisa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IsaacTemplete/East Door"]
+position = Vector2(636, 635)
+shape = SubResource("RectangleShape2D_v5vuv")
+
+[node name="South Door" type="Area2D" parent="IsaacTemplete"]
+position = Vector2(-642, -369)
+script = ExtResource("1_bisa2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IsaacTemplete/South Door"]
+position = Vector2(1175.25, 321)
+shape = SubResource("RectangleShape2D_ka7wq")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(108, -102)
+collision_layer = 2
+script = ExtResource("3_v5vuv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(255.5, 413)
+scale = Vector2(0.351563, 0.328125)
+texture = ExtResource("4_ka7wq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(255, 413)
+shape = SubResource("RectangleShape2D_x5k2b")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-107, 76)

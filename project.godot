@@ -12,4 +12,8 @@ config_version=5
 
 config/name="Vine_City_Takeover"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Testing/icon.svg"
+
+[autoload]
+
+Messager="*res://Testing/Luis/Messager.gd"
