@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="Vine_City_Takeover"
+run/main_scene="uid://b0qxqg8drde0k"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
