@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://c81xn0j31o7qf"]
+[gd_scene load_steps=4 format=3 uid="uid://doeaurbk1fx1v"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://c07llmbcxjibq" path="res://Testing/Luis/room.tscn" id="1_10vk4"]
+[ext_resource type="Script" uid="uid://d3rypjotlkvgt" path="res://Testing/Luis/Camera.gd" id="2_ap6gq"]
+[ext_resource type="PackedScene" uid="uid://bl8rh16ynije" path="res://Testing/Luis/player.tscn" id="3_bu3ma"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_glv2v")
+
+[node name="Room" parent="." instance=ExtResource("1_10vk4")]
+
+[node name="Left room" parent="." instance=ExtResource("1_10vk4")]
+position = Vector2(-1282, 0)
+
+[node name="Right room" parent="." instance=ExtResource("1_10vk4")]
+position = Vector2(1279, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_ap6gq")
+
+[node name="Player" parent="." instance=ExtResource("3_bu3ma")]

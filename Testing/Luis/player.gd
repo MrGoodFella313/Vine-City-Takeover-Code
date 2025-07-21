@@ -4,7 +4,7 @@ const 	SPEED = 300.0
 
 func _physics_process(delta):
 
-	var direction = Input.get_vector("left","right","up","down")
+	var direction = Input.get_vector("Left","Right","Up","Down")
 	if direction : 
 		velocity = direction * SPEED
 	else:
