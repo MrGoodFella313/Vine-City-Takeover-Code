@@ -3,4 +3,20 @@
 [ext_resource type="Script" path="res://node_2d.gd" id="1_glv2v"]
 
 [node name="Node2D" type="Node2D"]
+<<<<<<< Updated upstream
 script = ExtResource("1_glv2v")
+=======
+
+[node name="Room" parent="." instance=ExtResource("1_10vk4")]
+
+[node name="Left room" parent="." instance=ExtResource("1_10vk4")]
+position = Vector2(-1282, 0)
+
+[node name="Right room" parent="." instance=ExtResource("1_10vk4")]
+position = Vector2(1279, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_bu3ma")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+script = ExtResource("2_ap6gq")
+>>>>>>> Stashed changes
