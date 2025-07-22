@@ -17,13 +17,7 @@ config/icon="res://Testing/icon.svg"
 
 [autoload]
 
-Events="*res://Testing/Luis/Events.gd"
-
-[display]
-
-window/size/viewport_width=1600
-window/size/viewport_height=900
-window/size/resizable=false
+Messager="*res://Testing/Luis/Messager.gd"
 
 [input]
 
