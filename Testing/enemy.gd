@@ -6,6 +6,6 @@ const SPEED = 300.0
 
 func _physics_process(delta: float) -> void:
 	#where is the player
-	var direction = (player.pos - position).normalized()
+	var direction = (player.position - position).normalized()
 	velocity = direction * SPEED
 	move_and_slide()
