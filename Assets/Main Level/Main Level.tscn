@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=5 format=3 uid="uid://dddgvtwviupbk"]
+
+[ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
+[ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
+[ext_resource type="PackedScene" uid="uid://bxuhxu46q0jri" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
+[ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
 
 [node name="MainLevel" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("2_gmw17")]
+position = Vector2(455, 631)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_h64rl")]
+position = Vector2(171, 1013)
+rotation = -1.5708
+
+[node name="Node2D3" parent="." instance=ExtResource("1_djff6")]
+position = Vector2(1271, 1639)
+
+[node name="Node2D4" parent="." instance=ExtResource("4_djff6")]
+position = Vector2(2375, 1023)
