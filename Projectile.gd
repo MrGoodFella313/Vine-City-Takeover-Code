@@ -6,5 +6,5 @@ extends RigidBody2D
 func _physics_process(delta):
 	
 	var velocity = direction.normalized() * delta
-	print(velocity)
+	#print(velocity)
 	apply_force(velocity)
