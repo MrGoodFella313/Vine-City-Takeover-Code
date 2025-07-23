@@ -303,6 +303,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ntrsl")
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
