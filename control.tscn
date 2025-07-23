@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://c4xb1juq73nly"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://c4xb1juq73nly"]
+>>>>>>> Stashed changes
 =======
 [gd_scene load_steps=5 format=3 uid="uid://c4xb1juq73nly"]
 >>>>>>> Stashed changes
@@ -12,6 +16,12 @@ texture = ExtResource("1_0fbet")
 modulate_color = Color(0.205001, 0.237129, 0.246282, 1)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+[sub_resource type="FontVariation" id="FontVariation_qtu10"]
+base_font = ExtResource("2_62e2m")
+
+>>>>>>> Stashed changes
 =======
 [sub_resource type="FontVariation" id="FontVariation_qtu10"]
 base_font = ExtResource("2_62e2m")
@@ -82,6 +92,10 @@ offset_bottom = -275.0
 grow_horizontal = 2
 grow_vertical = 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+theme_override_fonts/font = SubResource("FontVariation_qtu10")
+>>>>>>> Stashed changes
 =======
 theme_override_fonts/font = SubResource("FontVariation_qtu10")
 >>>>>>> Stashed changes
