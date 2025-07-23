@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbru1l60n7m6x"]
+[gd_scene load_steps=4 format=3 uid="uid://5q05yqqxetlj"]
 
 [ext_resource type="Script" uid="uid://crry2yp7ittxm" path="res://Testing/Mohammed/Player.gd" id="1_q3lx1"]
 [ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_0tvpr"]
