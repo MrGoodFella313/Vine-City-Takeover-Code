@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://kgf1wnj8laum"]
 
-[ext_resource type="PackedScene" uid="uid://bmddlqut6uijp" path="res://Testing/Mohammed/Player.tscn" id="1_hfxbf"]
+[ext_resource type="PackedScene" uid="uid://bmddlqut6uijp" path="res://Assets/Player & Enemies/Monty.tscn" id="1_74hjr"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("1_hfxbf")]
+[node name="Player" parent="." instance=ExtResource("1_74hjr")]
 position = Vector2(19, -31)
 collision_mask = 4

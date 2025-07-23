@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbimv2dyx612h"]
 
-[ext_resource type="PackedScene" uid="uid://bmddlqut6uijp" path="res://Testing/Mohammed/Player.tscn" id="1_tg7ru"]
+[ext_resource type="PackedScene" uid="uid://bmddlqut6uijp" path="res://Assets/Player & Enemies/Monty.tscn" id="1_8g85h"]
 
 [node name="Monte" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_tg7ru")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_8g85h")]
 
 [node name="Sprite2D" parent="CharacterBody2D" index="0"]
 position = Vector2(1.5, -2.5)
