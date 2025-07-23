@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwq4au1yukcoo"]
+
+[ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Testing/Tarell/enemy.gd" id="1_c6f2n"]
+[ext_resource type="Texture2D" uid="uid://bev4nyev5iolx" path="res://Testing/icon.svg" id="2_3gcdk"]
+[ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_p0175"]
+[ext_resource type="Script" uid="uid://dr7hmi0h3qu0" path="res://Testing/Tarell/player.gd" id="3_3gcdk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlvh4"]
+size = Vector2(326, 152.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0175"]
+size = Vector2(132, 134)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="enemy" type="CharacterBody2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(312, 159)
+rotation = -6.28319
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_c6f2n")
+player = NodePath("../player")
+
+[node name="Sprite2D" type="Sprite2D" parent="enemy"]
+position = Vector2(140, -44)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_p0175")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(133, -43.75)
+shape = SubResource("RectangleShape2D_vlvh4")
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(418, 157)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_3gcdk")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(155, 1)
+texture = ExtResource("2_3gcdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(155, 1)
+shape = SubResource("RectangleShape2D_p0175")
