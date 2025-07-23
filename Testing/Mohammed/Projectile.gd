@@ -7,6 +7,10 @@ func _ready():
 	gravity_scale = 0
 
 func _physics_process(delta):
-	var linear_velocity = direction * move_speed
+	var linear_velocity = direction.normalized() * move_speed
+	#print(linear_velocity)
+	apply_force(linear_velocity)
+	await get_tree().create_timer(2.0).timeout
+	queue_free()
 	#print(velocity)
-	#apply_force(velocity)
+	

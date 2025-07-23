@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmddlqut6uijp"]
 
 [ext_resource type="Script" uid="uid://crry2yp7ittxm" path="res://Testing/Mohammed/Player.gd" id="1_q3lx1"]
-[ext_resource type="Texture2D" uid="uid://bev4nyev5iolx" path="res://Testing/icon.svg" id="2_kwegd"]
+[ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_0tvpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
 size = Vector2(129, 132)
@@ -10,7 +10,9 @@ size = Vector2(129, 132)
 script = ExtResource("1_q3lx1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_kwegd")
+position = Vector2(12, -13)
+scale = Vector2(0.102783, 0.102783)
+texture = ExtResource("2_0tvpr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
