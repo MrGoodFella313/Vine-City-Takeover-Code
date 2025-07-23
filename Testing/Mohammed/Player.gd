@@ -49,19 +49,22 @@ func _process(delta):
 		#print("down")
 		shoot_direction = (Vector2(0,offset_distance))
 		fire(shoot_direction)
+		$Sprite2D.texture = load("res://Assets/Spites/Back view monkey sprite.png")
 		
 	elif Input.is_action_just_pressed("shoot_up"):
 		#print("up")
 		shoot_direction = (Vector2(0,- offset_distance))
 		fire(shoot_direction)
+		$Sprite2D.texture = load("res://Assets/Spites/Front facing monkey sprite.png")
 		
 	elif Input.is_action_just_pressed("shoot_right"):
 		#print("right")
 		shoot_direction = (Vector2(offset_distance,0))
 		fire(shoot_direction)
+		$Sprite2D.texture = load("res://Assets/Spites/Right facing monkey sprite.png")
 		
 	elif Input.is_action_just_pressed("shoot_left"):
 		#print("left")
 		shoot_direction = (Vector2(-offset_distance,0))
 		fire(shoot_direction)
-	
+		$Sprite2D.texture = load("res://Assets/Spites/Left facing monkey sprite.png")
