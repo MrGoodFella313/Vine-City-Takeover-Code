@@ -1,20 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwq4au1yukcoo"]
+[gd_scene load_steps=5 format=3 uid="uid://dwq4au1yukcoo"]
 
 [ext_resource type="PackedScene" uid="uid://csk62pfgvemob" path="res://Assets/Player & Enemies/Jaguar.tscn" id="1_p0175"]
 [ext_resource type="Texture2D" uid="uid://bev4nyev5iolx" path="res://Testing/icon.svg" id="2_3gcdk"]
 [ext_resource type="Script" uid="uid://dr7hmi0h3qu0" path="res://Testing/Tarell/player.gd" id="3_3gcdk"]
-[ext_resource type="Script" uid="uid://827t0ta4g56v" path="res://Testing/Tarell/HealthBar.gd" id="5_vlvh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0175"]
 size = Vector2(132, 134)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="enemy" parent="." instance=ExtResource("1_p0175")]
+[node name="enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_p0175")]
 position = Vector2(312, 159)
+player = NodePath("../player")
 
 [node name="player" type="CharacterBody2D" parent="."]
-visible = false
 position = Vector2(418, 157)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_3gcdk")
@@ -26,11 +25,3 @@ texture = ExtResource("2_3gcdk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(155, 1)
 shape = SubResource("RectangleShape2D_p0175")
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-visible = false
-offset_left = 369.0
-offset_top = 51.0
-offset_right = 434.0
-offset_bottom = 87.0
-script = ExtResource("5_vlvh4")
