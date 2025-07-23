@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var projectile = preload("res://Testing/Mohammed/Projectile.tscn")
 
-@export var move_speed := 200.0
+@export var move_speed := 300.0
 @export var shoot_cooldown := 0.3
 @export var offset_distance := 80
 
