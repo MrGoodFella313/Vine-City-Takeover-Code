@@ -8,6 +8,7 @@ radius = 86.764
 
 [node name="RigidBody2D" type="RigidBody2D"]
 collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_cn8fl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
