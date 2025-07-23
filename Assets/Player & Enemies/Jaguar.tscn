@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://csk62pfgvemob"]
+[gd_scene load_steps=6 format=3 uid="uid://bcyp1si8y25lj"]
 
 [ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Testing/Tarell/enemy.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlvh4"]
-size = Vector2(223.5, 93.0313)
+[ext_resource type="Script" uid="uid://d0vu65g3j606f" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
 radius = 26.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlvh4"]
+size = Vector2(223.5, 93.0313)
 
 [node name="enemy" type="CharacterBody2D"]
 rotation = -6.28319
@@ -19,10 +20,15 @@ position = Vector2(140, -44)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_j3nqn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(174, -22)
-shape = SubResource("RectangleShape2D_vlvh4")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(14, -92)
 shape = SubResource("CircleShape2D_p0175")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["jaguar"]]
+position = Vector2(174, -22)
+script = ExtResource("3_j3nqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_vlvh4")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_area_2d_area_entered"]

@@ -9,3 +9,9 @@ func _physics_process(delta: float) -> void:
 	var direction = (player.position - position).normalized()
 	velocity = direction * SPEED
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("projectile"):
+		print("hit")
+	
