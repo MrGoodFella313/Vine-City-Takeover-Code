@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://bxuhxu46q0jri"]
+[gd_scene load_steps=4 format=4 uid="uid://bxuhxu46q0jri"]
 
 [ext_resource type="Texture2D" uid="uid://b068u17qidegg" path="res://Assets/Tilemaps/Set 1.png" id="1_pvrei"]
-[ext_resource type="PackedScene" uid="uid://c7r00wioy5qiq" path="res://Assets/Scripts/Monte.tscn" id="2_622kl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o70tu"]
 texture = ExtResource("1_pvrei")
@@ -329,5 +328,3 @@ tile_set = SubResource("TileSet_08gkj")
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAHAAEAAAAHABMAAAAHAAAAAAAHABIAAAD4/wEAAAAHABMAAAD4/wAAAAAHABIAAAAHAP7/AAAHABMAAAD4//7/AAAHABMAAAD4//3/AAAHABIAAAAHAP3/AAAHABIAAAD6//v/AAAFAAsAAAD6//z/AAAFAAsAAAD7//v/AAAFAAsAAAD8//v/AAAFAAsAAAD9//z/AAAFAAsAAAD+//3/AAAFAAsAAAD+//7/AAAFAAsAAAD6//3/AAAFAAsAAAD5//3/AAAFAAsAAAD5//7/AAAFAAsAAAD5////AAAFAAsAAAD4////AAAFAAsAAAD3/wAAAAAFAAsAAAD2/wAAAAAFAAsAAAD3/wEAAAAFAAsAAAD4/wIAAAAFAAsAAAD5/wMAAAAFAAsAAAD6/wMAAAAFAAsAAAD7/wMAAAAFAAsAAAD8/wIAAAAFAAsAAAD9/wIAAAAFAAsAAAD9/wMAAAAFAAsAAAD+/wQAAAAFAAsAAAABAP3/AAAFAAsAAAACAP//AAAFAAsAAAADAP7/AAAFAAsAAAAEAP7/AAAFAAsAAAAFAP3/AAAFAAsAAAAGAP//AAAFAAsAAAAHAP//AAAFAAsAAAAIAPv/AAAFAAsAAAAHAPv/AAAFAAsAAAAHAPz/AAAFAAsAAAAHAAQAAAAFAAsAAAAGAAMAAAAFAAsAAAAIAAMAAAAFAAsAAAD3//z/AAACAAwAAAA=")
 tile_set = SubResource("TileSet_08gkj")
-
-[node name="Monte" parent="." instance=ExtResource("2_622kl")]

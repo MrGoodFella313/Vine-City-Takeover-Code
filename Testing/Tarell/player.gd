@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
-
+signal healthChanged
 
 func _physics_process(_delta):
 	
@@ -14,3 +14,6 @@ func _physics_process(_delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+
+
+	healthChanged.emit()
