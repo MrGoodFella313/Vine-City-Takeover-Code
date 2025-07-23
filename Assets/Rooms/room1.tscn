@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b068u17qidegg" path="res://Assets/Tilemaps/Set 1.png" id="1_3eug0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ntrsl"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3eug0"]
 texture = ExtResource("1_3eug0")
 21:0/0 = 0
 22:0/0 = 0
@@ -300,7 +300,7 @@ texture = ExtResource("1_3eug0")
 
 [sub_resource type="TileSet" id="TileSet_dewo4"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ntrsl")
+sources/0 = SubResource("TileSetAtlasSource_3eug0")
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
