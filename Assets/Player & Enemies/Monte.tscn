@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5xuwv0mg1udu"]
+
+[ext_resource type="PackedScene" uid="uid://bmddlqut6uijp" path="res://Testing/Mohammed/Player.tscn" id="1_e01lw"]
+[ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_k6vss"]
+
+[node name="Monte" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_e01lw")]
+
+[node name="Sprite2D" parent="CharacterBody2D" index="0"]
+position = Vector2(1.5, -2.5)
+scale = Vector2(0.0327148, 0.0327148)
+texture = ExtResource("2_k6vss")
+
+[node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
+position = Vector2(-1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
+
+[editable path="CharacterBody2D"]
