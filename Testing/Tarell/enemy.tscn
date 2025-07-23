@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwq4au1yukcoo"]
 
-[ext_resource type="PackedScene" uid="uid://csk62pfgvemob" path="res://Assets/Player & Enemies/Jaguar.tscn" id="1_p0175"]
+[ext_resource type="PackedScene" uid="uid://bcyp1si8y25lj" path="res://Assets/Player & Enemies/Jaguar.tscn" id="1_p0175"]
 [ext_resource type="Texture2D" uid="uid://bev4nyev5iolx" path="res://Testing/icon.svg" id="2_3gcdk"]
 [ext_resource type="Script" uid="uid://dr7hmi0h3qu0" path="res://Testing/Tarell/player.gd" id="3_3gcdk"]
 

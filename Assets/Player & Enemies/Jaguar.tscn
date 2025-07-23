@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Testing/Tarell/enemy.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
-[ext_resource type="Script" uid="uid://d0vu65g3j606f" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
+[ext_resource type="Script" uid="uid://bf1vca2m7e0wf" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
 radius = 26.0
