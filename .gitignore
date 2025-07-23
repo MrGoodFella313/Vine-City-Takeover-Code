@@ -17,5 +17,3 @@ mono_crash.*.json
 *.uid
 *.uid
 *.godot
-enemy.gd.uid
-*.uid
