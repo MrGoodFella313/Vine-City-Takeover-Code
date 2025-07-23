@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3viuy5qtbvre"]
+
+[ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="1_cev1w"]
+[ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="2_2mbtb"]
+[ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="3_vhn71"]
+[ext_resource type="PackedScene" uid="uid://bxuhxu46q0jri" path="res://Assets/Rooms/room2.tscn" id="4_pu6fg"]
+[ext_resource type="PackedScene" uid="uid://c5xuwv0mg1udu" path="res://Assets/Player & Enemies/Monte.tscn" id="5_2mbtb"]
+
+[node name="test" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_cev1w")]
+position = Vector2(-817, -437)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_2mbtb")]
+position = Vector2(18, 619)
+
+[node name="Node2D4" parent="." instance=ExtResource("3_vhn71")]
+position = Vector2(1152, -44)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_pu6fg")]
+position = Vector2(-2, -969)
+
+[node name="Monte" parent="." instance=ExtResource("5_2mbtb")]

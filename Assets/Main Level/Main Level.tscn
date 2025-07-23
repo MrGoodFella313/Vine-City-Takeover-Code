@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=6 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://bxuhxu46q0jri" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
 [ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
+[ext_resource type="PackedScene" uid="uid://c5xuwv0mg1udu" path="res://Assets/Player & Enemies/Monte.tscn" id="5_gmw17"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -19,3 +20,9 @@ position = Vector2(1271, 1639)
 
 [node name="Node2D4" parent="." instance=ExtResource("4_djff6")]
 position = Vector2(2375, 1023)
+
+[node name="Monte" parent="." instance=ExtResource("5_gmw17")]
+position = Vector2(1265, 652)
+
+[editable path="Node2D"]
+[editable path="Node2D2"]

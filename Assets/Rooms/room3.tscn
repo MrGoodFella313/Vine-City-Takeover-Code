@@ -297,7 +297,7 @@ texture = ExtResource("1_i5dmu")
 [sub_resource type="TileSet" id="TileSet_vddjn"]
 sources/0 = SubResource("TileSetAtlasSource_htvxh")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1

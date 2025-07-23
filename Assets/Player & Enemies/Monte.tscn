@@ -6,6 +6,7 @@
 [node name="Monte" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_e01lw")]
+position = Vector2(454, 143)
 
 [node name="Sprite2D" parent="CharacterBody2D" index="0"]
 position = Vector2(1.5, -2.5)
@@ -13,9 +14,13 @@ scale = Vector2(0.0327148, 0.0327148)
 texture = ExtResource("2_k6vss")
 
 [node name="CollisionShape2D" parent="CharacterBody2D" index="1"]
-position = Vector2(-1.5, 1.5)
+position = Vector2(-2, 2)
+
+[node name="Node2D" parent="CharacterBody2D" index="2"]
+position = Vector2(-1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-160, -113)
 zoom = Vector2(2, 2)
 
 [editable path="CharacterBody2D"]
