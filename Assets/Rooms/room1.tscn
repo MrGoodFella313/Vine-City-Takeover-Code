@@ -302,7 +302,7 @@ texture = ExtResource("1_3eug0")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3eug0")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
