@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=8 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
 [ext_resource type="PackedScene" uid="uid://cf8mqun66q5s5" path="res://Assets/Player & Enemies/Monty.tscn" id="6_6dbim"]
 [ext_resource type="PackedScene" uid="uid://bcyp1si8y25lj" path="res://Assets/Player & Enemies/Jaguar.tscn" id="6_h64rl"]
+[ext_resource type="PackedScene" uid="uid://dhq8uip27dptv" path="res://Assets/UI/HealthUI.tscn" id="7_6dbim"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -24,10 +25,19 @@ position = Vector2(2375, 1023)
 
 [node name="enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_h64rl")]
 position = Vector2(1042, 1015)
-player = NodePath("../CharacterBody2D")
+player = NodePath("../Monty")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_6dbim")]
+[node name="Monty" parent="." instance=ExtResource("6_6dbim")]
 position = Vector2(868, 940)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" node_paths=PackedStringArray("Monty") instance=ExtResource("7_6dbim")]
+offset_left = 68.0
+offset_top = 487.0
+offset_right = 68.0
+offset_bottom = 487.0
+Monty = NodePath("../../Monty")
 
 [editable path="Node2D"]
 [editable path="Node2D2"]

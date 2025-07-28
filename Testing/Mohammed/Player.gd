@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+signal health_changed(new_health)
+
+@export var max_health: int = 10
+var current_health: int
+
 var projectile = preload("res://Testing/Mohammed/Projectile.tscn")
 
 @export var move_speed := 300.0
@@ -10,6 +15,8 @@ var can_shoot = true
 var shoot_timer: Timer
 
 func _ready():
+	current_health = max_health
+	health_changed.emit(current_health)
 	set_process(true)
 	shoot_timer = Timer.new()
 	add_child(shoot_timer)
@@ -68,3 +75,40 @@ func _process(delta):
 		shoot_direction = (Vector2(-offset_distance,0))
 		fire(shoot_direction)
 		$Sprite2D.texture = load("res://Assets/Spites/Left facing monkey sprite.png")
+		
+func take_damage(amount: int):
+	current_health -= amount
+	current_health = max(current_health, 0)
+	health_changed.emit(current_health)
+	
+	print("Player took %d damage, health is now %d" % [amount, current_health])
+
+	# TODO when the player dies pull up restart
+	if current_health == 0:
+		print("Player has died.")
+
+
+func heal(amount: int):
+	current_health += amount
+	current_health = min(current_health, max_health)
+	health_changed.emit(current_health)
+	print("Player healed %d, health is now %d" % [amount, current_health])
+
+
+
+# Test Function To remove later
+func _unhandled_input(event):
+	if event is InputEventKey and event.is_pressed() and not event.is_echo():
+		if event.keycode == KEY_V:
+			take_damage(2) # -1 heart (2 health points)
+		if event.keycode == KEY_B:
+			take_damage(1) # -0.5 heart (1 health point)
+		if event.keycode == KEY_N:
+			heal(1) # +0.5 heart (1 health point)
+		if event.keycode == KEY_M:
+			heal(2) # +1 heart (2 health points)
+		if event.keycode == KEY_H:
+			# Set health directly to max and emit the signal
+			current_health = max_health
+			health_changed.emit(current_health)
+			print("Player health restored to maximum.")
