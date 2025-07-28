@@ -5,6 +5,8 @@ extends RigidBody2D
 
 func _ready():
 	gravity_scale = 0
+	get_tree().create_timer(2.0).timeout.connect(queue_free)
+
 
 func _physics_process(delta):
 	var linear_velocity = direction.normalized() * move_speed
@@ -12,5 +14,5 @@ func _physics_process(delta):
 	apply_force(linear_velocity)
 	await get_tree().create_timer(2.0).timeout
 	queue_free()
-	#print(velocity)
+	
 	
