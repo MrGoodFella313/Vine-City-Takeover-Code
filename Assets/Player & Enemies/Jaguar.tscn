@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Testing/Tarell/enemy.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
-[ext_resource type="Script" uid="uid://bf1vca2m7e0wf" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
+[ext_resource type="Script" uid="uid://vai75x1jx36g" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
 radius = 26.0
@@ -34,9 +34,9 @@ script = ExtResource("3_j3nqn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
 shape = SubResource("RectangleShape2D_vlvh4")
 
-[node name="Player Detector" type="CollisionShape2D" parent="."]
+[node name="Player Detector" type="Area2D" parent="."]
+
+[node name="Player Detector" type="CollisionShape2D" parent="Player Detector"]
 position = Vector2(302, -25.9986)
 shape = SubResource("CircleShape2D_j3nqn")
 debug_color = Color(0.932573, 0.230426, 0.314156, 0.42)
-
-[node name="Area2D" type="Area2D" parent="."]
