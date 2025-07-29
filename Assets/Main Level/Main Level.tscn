@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=9 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cf8mqun66q5s5" path="res://Assets/Player & Enemies/Monty.tscn" id="6_6dbim"]
 [ext_resource type="PackedScene" uid="uid://bcyp1si8y25lj" path="res://Assets/Player & Enemies/Jaguar.tscn" id="6_h64rl"]
 [ext_resource type="PackedScene" uid="uid://dhq8uip27dptv" path="res://Assets/UI/HealthUI.tscn" id="7_6dbim"]
+[ext_resource type="PackedScene" uid="uid://p62vs7tmt2ew" path="res://Assets/Music/MusicSlider.tscn" id="8_26cu8"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -38,6 +39,9 @@ offset_top = 487.0
 offset_right = 68.0
 offset_bottom = 487.0
 Monty = NodePath("../../Monty")
+
+[node name="MusicSlider" parent="." instance=ExtResource("8_26cu8")]
+position = Vector2(693, 550)
 
 [editable path="Node2D"]
 [editable path="Node2D2"]
