@@ -14,10 +14,10 @@ func _ready():
 	
 	if Monty:
 		generate_hearts(Monty.max_health)
-		print("Max | ", Monty.max_health)
+		#print("Max | ", Monty.max_health)
 		Monty.health_changed.connect(update_hearts)
 		update_hearts(Monty.current_health)
-		print("Update | ", Monty.current_health)
+		#print("Update | ", Monty.current_health)
 	else:
 		print("HealthUI Error: Player node not found. Ensure the node path is correct.")
 
