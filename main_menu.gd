@@ -16,7 +16,7 @@ func _on_start_game_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	print("Options pressed")
+	get_tree().change_scene_to_file()
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
