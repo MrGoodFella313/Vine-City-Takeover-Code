@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://bxuhxu46q0jri"]
 
 [ext_resource type="Texture2D" uid="uid://b068u17qidegg" path="res://Assets/Tilemaps/Set 1.png" id="1_pvrei"]
-[ext_resource type="Texture2D" uid="uid://gg6538evgtd6" path="res://Vine tile map.png" id="2_622kl"]
+[ext_resource type="Texture2D" path="res://Vine tile map.png" id="2_622kl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o70tu"]
 texture = ExtResource("1_pvrei")
