@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gg6538evgtd6"
-path="res://.godot/imported/Vine tile map.png-4b050cbcfc8e5d76d9ec4a614f8dbf17.ctex"
+uid="uid://b4w4snhu4edcp"
+path="res://.godot/imported/tile map finalized.png-1ee5e9cba22779644be3e7431b8ec44d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vine tile map.png"
-dest_files=["res://.godot/imported/Vine tile map.png-4b050cbcfc8e5d76d9ec4a614f8dbf17.ctex"]
+source_file="res://tile map finalized.png"
+dest_files=["res://.godot/imported/tile map finalized.png-1ee5e9cba22779644be3e7431b8ec44d.ctex"]
 
 [params]
 
