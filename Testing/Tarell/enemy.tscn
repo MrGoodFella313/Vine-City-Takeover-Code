@@ -22,7 +22,7 @@ position = Vector2(174, -21.9992)
 shape = SubResource("RectangleShape2D_3gcdk")
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(418, 157)
+position = Vector2(499, 157)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("3_3gcdk")
 

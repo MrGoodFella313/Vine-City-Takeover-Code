@@ -18,3 +18,4 @@ mono_crash.*.json
 *.uid
 *.godot
 *.godot
+project.godot

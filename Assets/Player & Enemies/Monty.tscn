@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf8mqun66q5s5"]
+[gd_scene load_steps=6 format=3 uid="uid://cf8mqun66q5s5"]
 
 [ext_resource type="Script" uid="uid://crry2yp7ittxm" path="res://Testing/Mohammed/Player.gd" id="1_yifv5"]
+[ext_resource type="PackedScene" uid="uid://c4j2x3g4qpkqc" path="res://Testing/Mohammed/Projectile.tscn" id="2_gixqa"]
 [ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_r7rd1"]
+[ext_resource type="PackedScene" uid="uid://dg3glj07la5rl" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_flq2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
 size = Vector2(129, 132)
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.500848, 0.520711)
 script = ExtResource("1_yifv5")
+regular_banana_scene = ExtResource("2_gixqa")
+fire_banana_scene = ExtResource("3_flq2q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(12, -13)
