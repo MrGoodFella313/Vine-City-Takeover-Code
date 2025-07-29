@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doc81b57ju8kq"
-path="res://.godot/imported/Vine pillar tile.PNG-7c3fd5f0c15a4319ed03b843381f576b.ctex"
+uid="uid://cvr2nu126hkau"
+path="res://.godot/imported/tilemap.png-838486f2ee5f5764f6a08fbb86e9df3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Vine pillar tile.PNG"
-dest_files=["res://.godot/imported/Vine pillar tile.PNG-7c3fd5f0c15a4319ed03b843381f576b.ctex"]
+source_file="res://tilemap.png"
+dest_files=["res://.godot/imported/tilemap.png-838486f2ee5f5764f6a08fbb86e9df3c.ctex"]
 
 [params]
 
