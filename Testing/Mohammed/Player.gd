@@ -8,7 +8,7 @@ var current_health: int
 var projectile = preload("res://Testing/Mohammed/Projectile.tscn")
 
 @export var move_speed := 300.0
-@export var shoot_cooldown := 0.3
+@export var shoot_cooldown := 0.2
 @export var offset_distance := 80
 
 var can_shoot = true
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 # Projectile spawns in whatever direction you press
-func fire(direction):
+func fire(direction, angle):
 	if can_shoot:
 		can_shoot = false
 		shoot_timer.start(shoot_cooldown)
@@ -45,7 +45,10 @@ func fire(direction):
 		#print("Projectile Pos | ", newprojectile.global_position)
 		#print("Spawn | ", projectile_spawn)
 		newprojectile.direction = direction
-		
+		#var banana_rotation =
+		#print("Before| ", newprojectile.rotation)
+		newprojectile.rotation = angle;
+		#print("After| ", newprojectile.rotation)
 		newprojectile.global_position = projectile_spawn
 		get_parent().add_child(newprojectile)
 	
@@ -55,25 +58,25 @@ func _process(delta):
 	if Input.is_action_just_pressed("shoot_down"):
 		#print("down")
 		shoot_direction = (Vector2(0,offset_distance))
-		fire(shoot_direction)
-		$Sprite2D.texture = load("res://Assets/Spites/Back view monkey sprite.png")
-		
+		fire(shoot_direction, 70)
+		$Sprite2D.texture = load("res://Assets/Spites/Front facing monkey sprite.png")
+	
 	elif Input.is_action_just_pressed("shoot_up"):
 		#print("up")
 		shoot_direction = (Vector2(0,- offset_distance))
-		fire(shoot_direction)
-		$Sprite2D.texture = load("res://Assets/Spites/Front facing monkey sprite.png")
+		fire(shoot_direction, -90)
+		$Sprite2D.texture = load("res://Assets/Spites/Back view monkey sprite.png")
 		
 	elif Input.is_action_just_pressed("shoot_right"):
 		#print("right")
 		shoot_direction = (Vector2(offset_distance,0))
-		fire(shoot_direction)
+		fire(shoot_direction, 0)
 		$Sprite2D.texture = load("res://Assets/Spites/Right facing monkey sprite.png")
 		
 	elif Input.is_action_just_pressed("shoot_left"):
 		#print("left")
 		shoot_direction = (Vector2(-offset_distance,0))
-		fire(shoot_direction)
+		fire(shoot_direction, -123)
 		$Sprite2D.texture = load("res://Assets/Spites/Left facing monkey sprite.png")
 		
 func take_damage(amount: int):
