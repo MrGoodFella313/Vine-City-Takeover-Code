@@ -1,9 +1,10 @@
-extends Area2D
-
-@export var pickup_amount : int = 1
+extends Node2D
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is.in.group("Player"):
-		print('player health increase')
-		"""HealthManager.increase_health(pickup_amount)
-		queue_free()"""
+	if body.is_in_group("Monty"):
+		print("Player health increased")
+		if body.has_method("heal"):
+			body.heal(3)
+		else:
+			print("Warning: body has no 'heal' method!")
+		queue_free()
