@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqcn6q85tip16"]
+[gd_scene load_steps=7 format=3 uid="uid://cqcn6q85tip16"]
 
 [ext_resource type="Texture2D" uid="uid://qe0eq85wq4lg" path="res://Basic Background.jpg" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://bsxjxddr0oqto" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://dh0osppxjiqxj" path="res://DM Bubble Pop Bold.ttf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
@@ -25,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fu7sn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -110,3 +112,7 @@ theme_override_constants/shadow_offset_y = 10
 theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 100
 text = "Vine City Takeover"
+
+[connection signal="pressed" from="VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
