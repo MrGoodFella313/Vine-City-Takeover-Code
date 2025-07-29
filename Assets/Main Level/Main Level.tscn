@@ -24,11 +24,11 @@ position = Vector2(1271, 1639)
 [node name="Node2D4" parent="." instance=ExtResource("4_djff6")]
 position = Vector2(2375, 1023)
 
-[node name="enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_h64rl")]
+[node name="enemy" parent="." instance=ExtResource("6_h64rl")]
 position = Vector2(1042, 1015)
-player = NodePath("../Monty")
+player_node_path = NodePath("../Monty")
 
-[node name="Monty" parent="." instance=ExtResource("6_6dbim")]
+[node name="Monty" parent="." groups=["Monty"] instance=ExtResource("6_6dbim")]
 position = Vector2(868, 940)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

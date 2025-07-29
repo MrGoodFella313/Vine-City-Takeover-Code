@@ -1,42 +1,58 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcyp1si8y25lj"]
+[gd_scene load_steps=6 format=3 uid="uid://bcyp1si8y25lj"]
 
-[ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Testing/Tarell/enemy.gd" id="1_7qprt"]
+[ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Assets/Player & Enemies/jaguar.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
-[ext_resource type="Script" uid="uid://vai75x1jx36g" path="res://Assets/Player & Enemies/hitbox.gd" id="3_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
-radius = 26.0
+radius = 40.05
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlvh4"]
 size = Vector2(223.5, 93.0313)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3nqn"]
-radius = 114.018
+radius = 82.0244
 
-[node name="enemy" type="CharacterBody2D"]
+[node name="Jaguar" type="CharacterBody2D" groups=["Jaguar"]]
 rotation = -6.28319
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_7qprt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(140, -44)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_j3nqn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(14, -92)
+[node name="TailCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(-148, -60)
 shape = SubResource("CircleShape2D_p0175")
 
-[node name="enemy_hitbox" type="Area2D" parent="." groups=["jaguar"]]
-position = Vector2(174, -22)
-script = ExtResource("3_j3nqn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+[node name="BodyCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(14, 9.99862)
 shape = SubResource("RectangleShape2D_vlvh4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-22, -10)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_j3nqn")
 
 [node name="Player Detector" type="Area2D" parent="."]
 
 [node name="Player Detector" type="CollisionShape2D" parent="Player Detector"]
-position = Vector2(302, -25.9986)
+position = Vector2(118, 6.00002)
 shape = SubResource("CircleShape2D_j3nqn")
 debug_color = Color(0.932573, 0.230426, 0.314156, 0.42)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="TailCollisionShape" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-148, -60)
+shape = SubResource("CircleShape2D_p0175")
+
+[node name="BodyCollisionShape" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(14, 9.99862)
+shape = SubResource("RectangleShape2D_vlvh4")
+
+[node name="TailHitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="TailCollisionShape" type="CollisionShape2D" parent="TailHitbox"]
+position = Vector2(-148, -60)
+shape = SubResource("CircleShape2D_p0175")
