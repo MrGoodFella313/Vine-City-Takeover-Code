@@ -5,7 +5,10 @@ signal health_changed(new_health)
 @export var max_health: int = 10
 var current_health: int
 
-var projectile = preload("res://Testing/Mohammed/Projectile.tscn")
+#var projectile = preload("res://Testing/Mohammed/Projectile.tscn")
+@export var regular_banana_scene: PackedScene
+@export var fire_banana_scene: PackedScene 
+var current_projectile_scene: PackedScene
 
 @export var move_speed := 300.0
 @export var shoot_cooldown := 0.2
@@ -23,6 +26,8 @@ func _ready():
 	shoot_timer.one_shot = true
 	shoot_timer.timeout.connect(func(): can_shoot = true)
 
+	current_projectile_scene = regular_banana_scene 
+
 # Player movement (WASD)
 func _physics_process(delta):
 	var direction = Vector2(
@@ -38,7 +43,7 @@ func fire(direction, angle):
 	if can_shoot:
 		can_shoot = false
 		shoot_timer.start(shoot_cooldown)
-		var newprojectile = projectile.instantiate()
+		var newprojectile = current_projectile_scene.instantiate()
 		#print("Direction | ", direction)
 		#print("Player Pos | ", position)
 		var projectile_spawn = Vector2(position.x + direction.x ,position.y + direction.y)
@@ -79,6 +84,10 @@ func _process(delta):
 		fire(shoot_direction, -123)
 		$Sprite2D.texture = load("res://Assets/Spites/Left facing monkey sprite.png")
 		
+		
+	if Input.is_action_just_pressed("switch_bullet"):
+		switch_projectile_type()
+
 func take_damage(amount: int):
 	current_health -= amount
 	current_health = max(current_health, 0)
@@ -115,3 +124,12 @@ func _unhandled_input(event):
 			current_health = max_health
 			health_changed.emit(current_health)
 			print("Player health restored to maximum.")
+
+func switch_projectile_type():
+	if current_projectile_scene == regular_banana_scene:
+		current_projectile_scene = fire_banana_scene
+		print("Switched to Fire Banana!")
+		
+	else:
+		current_projectile_scene = regular_banana_scene
+		print("Switched to Regular Banana!")
