@@ -17,6 +17,9 @@ var current_projectile_scene: PackedScene
 var can_shoot = true
 var shoot_timer: Timer
 
+var is_fire_banana_mode: bool = false
+
+
 func _ready():
 	current_health = max_health
 	health_changed.emit(current_health)
@@ -64,25 +67,25 @@ func _process(delta):
 		#print("down")
 		shoot_direction = (Vector2(0,offset_distance))
 		fire(shoot_direction, 70)
-		$Sprite2D.texture = load("res://Assets/Spites/Front facing monkey sprite.png")
+		$Sprite2D.texture = load("res://Assets/Spites/monty with basic gun front face .png")
 	
 	elif Input.is_action_just_pressed("shoot_up"):
 		#print("up")
 		shoot_direction = (Vector2(0,- offset_distance))
 		fire(shoot_direction, -90)
-		$Sprite2D.texture = load("res://Assets/Spites/Back view monkey sprite.png")
+		$Sprite2D.texture = load("res://Assets/Spites/monty with gun back face .png")
 		
 	elif Input.is_action_just_pressed("shoot_right"):
 		#print("right")
 		shoot_direction = (Vector2(offset_distance,0))
 		fire(shoot_direction, 0)
-		$Sprite2D.texture = load("res://Assets/Spites/Right facing monkey sprite.png")
+		$Sprite2D.texture = load("res://Assets/Spites/monty with basic gun right face .png")
 		
 	elif Input.is_action_just_pressed("shoot_left"):
 		#print("left")
 		shoot_direction = (Vector2(-offset_distance,0))
 		fire(shoot_direction, -123)
-		$Sprite2D.texture = load("res://Assets/Spites/Left facing monkey sprite.png")
+		$Sprite2D.texture = load("res://Assets/Spites/Monty with basic gun left face.png")
 		
 		
 	if Input.is_action_just_pressed("switch_bullet"):
@@ -126,6 +129,8 @@ func _unhandled_input(event):
 			print("Player health restored to maximum.")
 
 func switch_projectile_type():
+	is_fire_banana_mode = not is_fire_banana_mode
+
 	if current_projectile_scene == regular_banana_scene:
 		current_projectile_scene = fire_banana_scene
 		print("Switched to Fire Banana!")
