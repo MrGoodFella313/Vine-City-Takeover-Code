@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b068u17qidegg" path="res://Assets/Tilemaps/Set 1.png" id="1_3eug0"]
 [ext_resource type="Texture2D" uid="uid://cihxiuqdlhmsg" path="res://Assets/Tilemaps/Vine tile map.png" id="2_my7ga"]
 [ext_resource type="Texture2D" uid="uid://32esqxxq68eb" path="res://Assets/Tilemaps/Vine pillar tile.PNG" id="3_hi2cq"]
-[ext_resource type="Texture2D" uid="uid://cvr2nu126hkau" path="res://Assets/Tilemaps/tilemap.png" id="4_hi2cq"]
+[ext_resource type="Texture2D" uid="uid://bmho5foo6mwh1" path="res://tilemap 7.30.PNG" id="4_hi2cq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3eug0"]
 texture = ExtResource("1_3eug0")
@@ -132,7 +132,7 @@ texture = ExtResource("1_3eug0")
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.93333, -8, -1.06667, 8, -1.06667, 8, -6.93333)
 7:7/0 = 0
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.06667, 1.06667, -1.06667, 1.06667, 8, 6.93333, 8, 6.93333, -5.86667, 5.86667, -6.93333, -8, -6.93333)
 8:7/0 = 0
@@ -433,18 +433,14 @@ texture = ExtResource("2_my7ga")
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
-9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:7/0 = 0
-10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:7/0 = 0
 12:7/0 = 0
 13:7/0 = 0
 14:7/0 = 0
-14:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:7/0 = 0
 16:7/0 = 0
 17:7/0 = 0
@@ -459,7 +455,6 @@ texture = ExtResource("2_my7ga")
 7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
-9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.890301, -8, -0.890301, 1.38491, -8, 6.82564, -8, -8)
 10:8/0 = 0
 11:8/0 = 0
 12:8/0 = 0
@@ -522,7 +517,6 @@ texture = ExtResource("2_my7ga")
 10:11/0 = 0
 11:11/0 = 0
 12:11/0 = 0
-12:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:11/0 = 0
 14:11/0 = 0
 15:11/0 = 0
@@ -538,11 +532,8 @@ texture = ExtResource("2_my7ga")
 6:12/0 = 0
 7:12/0 = 0
 8:12/0 = 0
-8:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 9:12/0 = 0
-9:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:12/0 = 0
-10:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 11:12/0 = 0
 12:12/0 = 0
 13:12/0 = 0
@@ -555,11 +546,8 @@ texture = ExtResource("2_my7ga")
 6:13/0 = 0
 7:13/0 = 0
 8:13/0 = 0
-8:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:13/0 = 0
-9:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:13/0 = 0
-10:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:13/0 = 0
 12:13/0 = 0
 13:13/0 = 0
@@ -2630,14 +2618,13 @@ texture = ExtResource("4_hi2cq")
 8:19/0 = 0
 9:19/0 = 0
 10:19/0 = 0
-11:19/0 = 0
 13:19/0 = 0
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7864q"]
 sources/0 = SubResource("TileSetAtlasSource_mcnkr")
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
