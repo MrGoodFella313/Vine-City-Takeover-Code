@@ -323,6 +323,7 @@ texture = ExtResource("2_wb32l")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wb32l"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f8rpw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5kqa"]
@@ -646,6 +647,7 @@ texture = ExtResource("2_wb32l")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o2huy"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_u5kqa")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2huy"]
@@ -969,6 +971,7 @@ texture = ExtResource("2_wb32l")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rlp6m"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o2huy")
 
 [node name="Node2D2" type="Node2D"]
