@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bbdc88uiuvf0n" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
-[ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
+[ext_resource type="PackedScene" uid="uid://bxuhxu46q0jri" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
 [ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
 [ext_resource type="PackedScene" uid="uid://cf8mqun66q5s5" path="res://Assets/Player & Enemies/Monty.tscn" id="6_6dbim"]
 [ext_resource type="PackedScene" uid="uid://bcyp1si8y25lj" path="res://Assets/Player & Enemies/Jaguar.tscn" id="6_h64rl"]
