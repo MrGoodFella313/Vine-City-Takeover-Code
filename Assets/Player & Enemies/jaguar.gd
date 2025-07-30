@@ -3,6 +3,9 @@ extends CharacterBody2D
 # Define the possible states for the enemy.
 enum State { IDLE, CHASE, ATTACK, ATTACK_WINDUP, COOLDOWN }
 
+@export var max_health: int = 3
+var current_health: int
+
 @export var speed: float = 125.0
 @export var windup_duration: float = 0.5  # How long to wait before spinning.
 @export var attack_duration: float = 1.5  # How long the spin attack lasts.
@@ -22,12 +25,14 @@ var windup_time_left: float = 0.0
 var attack_time_left: float = 0.0
 var cooldown_time_left: float = 0.0
 
-# Node references that you will assign in the editor or via @onready.
+# Node references tha t you will assign in the editor or via @onready.
 @onready var player_detector = $"Player Detector"   # Area2D to detect the player and trigger attack.
 @onready var attack_hitbox = $TailHitbox       # Area2D for the spin attack damage.
 @onready var hurtbox = $Hurtbox                 # Area2D for taking damage.
 
 func _ready() -> void:
+	
+	current_health = max_health
 	# Get a reference to the player node from the assigned path.
 	player_reference = get_node_or_null(player_node_path)
 	if not player_reference:
@@ -151,7 +156,29 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	print(area.get_groups())
 	# Check if the area that hit the jaguar is in the "projectiles" group.
 	if area.is_in_group("Projectile"):
-		print("Jaguar was hit!")
-		queue_free()
+		var damage_amount = 1
+		
+		if area.is_in_group("Fire"):
+			damage_amount = 2
+			print("Jaguar was hit by a FIRE projectile!")
+		else: 
+			print("Jaguar was hit by a REGULAR projectile!")
+			
+		take_damage(damage_amount)
 		area.queue_free() # Destroy the projectile on hit.
 		
+
+
+func  take_damage(amount: int):
+	current_health -= amount
+	current_health = max(current_health, 0)
+	
+	print("Jaguar took %d damage, health is now %d" % [amount, current_health])
+	
+	if current_health <= 0:
+		die()
+		
+		
+func die():
+	print("Jaguar Had Died!")
+	queue_free()

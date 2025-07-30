@@ -19,7 +19,7 @@ rotation = -1.41803
 scale = Vector2(0.0853419, 0.0853419)
 texture = ExtResource("2_wfofm")
 
-[node name="Area2D" type="Area2D" parent="." groups=["Projectile"]]
+[node name="Area2D" type="Area2D" parent="." groups=["Fire", "Projectile"]]
 collision_layer = 2
 collision_mask = 2
 
