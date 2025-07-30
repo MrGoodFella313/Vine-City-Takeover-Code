@@ -156,8 +156,15 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	print(area.get_groups())
 	# Check if the area that hit the jaguar is in the "projectiles" group.
 	if area.is_in_group("Projectile"):
-		print("Jaguar was hit!")
-		take_damage(1)
+		var damage_amount = 1
+		
+		if area.is_in_group("Fire"):
+			damage_amount = 2
+			print("Jaguar was hit by a FIRE projectile!")
+		else: 
+			print("Jaguar was hit by a REGULAR projectile!")
+			
+		take_damage(damage_amount)
 		area.queue_free() # Destroy the projectile on hit.
 		
 
