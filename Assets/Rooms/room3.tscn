@@ -2,8 +2,12 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hgvhd"]
 load_path = "res://.godot/imported/tilemap.png-838486f2ee5f5764f6a08fbb86e9df3c.ctex"
+=======
+[ext_resource type="Texture2D" path="res://Assets/Tilemaps/tilemap.png" id="2_wb32l"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="Texture2D" path="res://Assets/Tilemaps/tilemap.png" id="2_wb32l"]
 >>>>>>> Stashed changes
