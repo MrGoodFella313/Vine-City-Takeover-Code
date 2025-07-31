@@ -11,6 +11,7 @@ var current_health: int
 @export var attack_duration: float = 1.5  # How long the spin attack lasts.
 @export var cooldown_duration: float = 3.0 # How long to idle after an attack.
 @export var rotation_speed: float = TAU # Speed of the spin attack.
+@export var attack_damage: int = 1
 var _theta : float
 
 # Assign the player node in the inspector. The jaguar will chase this target.
@@ -46,6 +47,8 @@ func _ready() -> void:
 	
 	# The hurtbox checks for projectiles.
 	hurtbox.area_entered.connect(_on_hurtbox_area_entered)
+	
+	attack_hitbox.body_entered.connect(_on_tail_hitbox_area_entered)
 	
 	# Set the initial state to CHASE.
 	change_state(State.CHASE)
@@ -182,3 +185,12 @@ func  take_damage(amount: int):
 func die():
 	print("Jaguar Had Died!")
 	queue_free()
+
+
+func _on_tail_hitbox_area_entered(body: Node) -> void:
+	if body.is_in_group("Monty"):
+		# Ensure the jaguar is in an attacking state before dealing damage
+		if current_state == State.ATTACK:
+			if body.has_method("take_damage"):
+				body.take_damage(attack_damage)
+				#print("Jaguar hit the player for %d damage!" % attack_damage")
