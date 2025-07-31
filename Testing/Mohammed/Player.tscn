@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://dbru1l60n7m6x"]
+[gd_scene load_steps=21 format=3 uid="uid://cs7x1x43vsf63"]
 
-[ext_resource type="Script" uid="uid://crry2yp7ittxm" path="res://Testing/Mohammed/Player.gd" id="1_q3lx1"]
+[ext_resource type="Script" path="res://Testing/Mohammed/Player.gd" id="1_q3lx1"]
 [ext_resource type="Texture2D" uid="uid://bxh3pj02bittl" path="res://Assets/Spites/Right facing monkey sprite.png" id="2_0tvpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
