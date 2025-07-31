@@ -322,7 +322,6 @@ texture = ExtResource("1_3eug0")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_my7ga"]
-physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6mio7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi2cq"]
@@ -645,7 +644,6 @@ texture = ExtResource("1_3eug0")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_soxl5"]
-physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hi2cq")
 
 [node name="Node2D2" type="Node2D"]
