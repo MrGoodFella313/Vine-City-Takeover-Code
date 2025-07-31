@@ -50,8 +50,7 @@ position = Vector2(14, 9.99862)
 shape = SubResource("RectangleShape2D_vlvh4")
 
 [node name="TailHitbox" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
 
 [node name="TailCollisionShape" type="CollisionShape2D" parent="TailHitbox"]
 position = Vector2(-148, -60)
