@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsulkluq3uwjf"
-path="res://.godot/imported/tilemap.png-838486f2ee5f5764f6a08fbb86e9df3c.ctex"
+uid="uid://ltpqgskuq8js"
+path="res://.godot/imported/monty with basic gun front face .png-580339548bf65db3ec10f0db3fd8a1ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tilemap.png"
-dest_files=["res://.godot/imported/tilemap.png-838486f2ee5f5764f6a08fbb86e9df3c.ctex"]
+source_file="res://Assets/Spites/monty with basic gun front face .png"
+dest_files=["res://.godot/imported/monty with basic gun front face .png-580339548bf65db3ec10f0db3fd8a1ad.ctex"]
 
 [params]
 

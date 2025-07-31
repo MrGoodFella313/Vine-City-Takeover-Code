@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<<< HEAD:tilemap 7.30.PNG.import
+uid="uid://dcytan87agy2k"
+path="res://.godot/imported/tilemap 7.30.PNG-bf4c1fdcf7fc2c4dd18e59b11c3f974e.ctex"
+========
+uid="uid://cvr2nu126hkau"
+path="res://.godot/imported/tilemap.png-e8e1f113d9233b349f01b2f772bf871a.ctex"
+>>>>>>>> f7d3123262b62baddc97cabce517c922ad89c51a:Assets/Tilemaps/tilemap.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<<< HEAD:tilemap 7.30.PNG.import
+source_file="res://tilemap 7.30.PNG"
+dest_files=["res://.godot/imported/tilemap 7.30.PNG-bf4c1fdcf7fc2c4dd18e59b11c3f974e.ctex"]
+========
+source_file="res://Assets/Tilemaps/tilemap.png"
+dest_files=["res://.godot/imported/tilemap.png-e8e1f113d9233b349f01b2f772bf871a.ctex"]
+>>>>>>>> f7d3123262b62baddc97cabce517c922ad89c51a:Assets/Tilemaps/tilemap.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

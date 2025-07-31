@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dg3glj07la5rl" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_flq2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
-size = Vector2(129, 132)
+size = Vector2(85.8544, 126.75)
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 scale = Vector2(0.500848, 0.520711)
@@ -20,7 +20,7 @@ scale = Vector2(0.102783, 0.102783)
 texture = ExtResource("2_r7rd1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0.998309, -1.92045)
 shape = SubResource("RectangleShape2D_2xoil")
 
 [node name="Node2D" type="Node2D" parent="."]
