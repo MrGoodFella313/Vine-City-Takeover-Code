@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal killed
+
 # Define the possible states for the enemy.
 enum State { IDLE, CHASE, ATTACK, ATTACK_WINDUP, COOLDOWN }
 
@@ -184,6 +186,8 @@ func  take_damage(amount: int):
 		
 func die():
 	print("Jaguar Had Died!")
+	# Before freeing the node, emit the signal to let others know it's been killed.
+	killed.emit()
 	queue_free()
 
 

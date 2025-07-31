@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal health_changed(new_health)
+signal kill_count_updated(current_kills, max_kills)
 
 @export var max_health: int = 10
 var current_health: int
@@ -19,6 +20,10 @@ var shoot_timer: Timer
 
 var is_fire_banana_mode: bool = false
 
+# Variables for tracking game progress
+var jaguars_killed_count: int = 0
+const JAGUARS_TO_KILL: int = 6
+
 
 func _ready():
 	current_health = max_health
@@ -29,7 +34,16 @@ func _ready():
 	shoot_timer.one_shot = true
 	shoot_timer.timeout.connect(func(): can_shoot = true)
 
-	current_projectile_scene = regular_banana_scene 
+	current_projectile_scene = regular_banana_scene
+	
+	
+	# Connect to the killed signal of all enemies in the "enemies" group.
+	# NOTE: You MUST add your Jaguar enemy nodes to the "enemies" group in the Godot editor.
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		if enemy.has_signal("killed"):
+			enemy.killed.connect(_on_jaguar_killed)
+
+	kill_count_updated.emit(jaguars_killed_count, JAGUARS_TO_KILL)
 
 # Player movement (WASD)
 func _physics_process(delta):
@@ -138,3 +152,15 @@ func switch_projectile_type():
 	else:
 		current_projectile_scene = regular_banana_scene
 		print("Switched to Regular Banana!")
+
+
+func _on_jaguar_killed():
+	jaguars_killed_count += 1
+	print("SIGNAL RECEIVED: Jaguar killed! Total killed: %d/%d" % [jaguars_killed_count, JAGUARS_TO_KILL])
+	
+	# Emit the signal so the UI can update
+	kill_count_updated.emit(jaguars_killed_count, JAGUARS_TO_KILL)
+	
+	if jaguars_killed_count >= JAGUARS_TO_KILL:
+		print("You Win! You defeated all the jaguars!")
+		# Add game-ending logic here, such as changing the scene, showing a UI, etc.

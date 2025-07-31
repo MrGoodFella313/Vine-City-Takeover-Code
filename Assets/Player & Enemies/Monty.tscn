@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cf8mqun66q5s5"]
 
-[ext_resource type="Script" path="res://Testing/Mohammed/Player.gd" id="1_yifv5"]
-[ext_resource type="PackedScene" path="res://Testing/Mohammed/Projectile.tscn" id="2_gixqa"]
+[ext_resource type="Script" uid="uid://crry2yp7ittxm" path="res://Testing/Mohammed/Player.gd" id="1_yifv5"]
+[ext_resource type="PackedScene" uid="uid://c4j2x3g4qpkqc" path="res://Testing/Mohammed/Projectile.tscn" id="2_gixqa"]
 [ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_r7rd1"]
-[ext_resource type="PackedScene" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_flq2q"]
+[ext_resource type="PackedScene" uid="uid://dg3glj07la5rl" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_flq2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
 size = Vector2(85.8544, 126.75)
