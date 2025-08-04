@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://e6n7aun78mgm"]
 
 [ext_resource type="PackedScene" uid="uid://cs7x1x43vsf63" path="res://Testing/Mohammed/Player.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" path="res://Testing/Mohammed/Projectile.tscn" id="2_5xr35"]
-[ext_resource type="PackedScene" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_f1psj"]
+[ext_resource type="PackedScene" uid="uid://c4j2x3g4qpkqc" path="res://Testing/Mohammed/Projectile.tscn" id="2_5xr35"]
+[ext_resource type="PackedScene" uid="uid://dg3glj07la5rl" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_f1psj"]
 
 [node name="Node2D2" type="Node2D"]
 
