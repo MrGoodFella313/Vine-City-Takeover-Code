@@ -156,11 +156,10 @@ func switch_projectile_type():
 
 func _on_jaguar_killed():
 	jaguars_killed_count += 1
-	print("SIGNAL RECEIVED: Jaguar killed! Total killed: %d/%d" % [jaguars_killed_count, JAGUARS_TO_KILL])
+	print("Jaguar killed! Total killed: %d/%d" % [jaguars_killed_count, JAGUARS_TO_KILL])
 	
-	# Emit the signal so the UI can update
 	kill_count_updated.emit(jaguars_killed_count, JAGUARS_TO_KILL)
 	
 	if jaguars_killed_count >= JAGUARS_TO_KILL:
 		print("You Win! You defeated all the jaguars!")
-		# Add game-ending logic here, such as changing the scene, showing a UI, etc.
+		# Add game ending logic here
