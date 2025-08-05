@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
-[ext_resource type="Script" uid="uid://1yuvdspr67x5" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
+[ext_resource type="Script" uid="uid://22hku1imfy3n" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
-[ext_resource type="PackedScene" uid="uid://dbokxlmk8rq8t" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
+[ext_resource type="PackedScene" uid="uid://bv75apys5qobo" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
 [ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
 [ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
 [ext_resource type="PackedScene" uid="uid://cf8mqun66q5s5" path="res://Assets/Player & Enemies/Monty.tscn" id="6_6dbim"]
 [ext_resource type="PackedScene" uid="uid://bcyp1si8y25lj" path="res://Assets/Player & Enemies/Jaguar.tscn" id="6_h64rl"]
 [ext_resource type="PackedScene" uid="uid://dhq8uip27dptv" path="res://Assets/UI/HealthUI.tscn" id="7_6dbim"]
-[ext_resource type="PackedScene" uid="uid://b0q0ymfih4i67" path="res://Pause_Menu.tscn" id="7_22750"]
+[ext_resource type="PackedScene" path="res://Pause_Menu.tscn" id="7_22750"]
 [ext_resource type="PackedScene" uid="uid://p62vs7tmt2ew" path="res://Assets/Music/MusicSlider.tscn" id="8_26cu8"]
 [ext_resource type="PackedScene" uid="uid://cs0oe8oqtshyu" path="res://Testing/Luis/PassionFruit.tscn" id="9_sqmis"]
-[ext_resource type="PackedScene" uid="uid://cvhsbe3bby5ex" path="res://Testing/kill_count_ui.tscn" id="10_22750"]
+[ext_resource type="PackedScene" path="res://Testing/kill_count_ui.tscn" id="10_22750"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -95,7 +95,7 @@ player_node_path = NodePath("../Monty")
 room_number = 2
 
 [node name="enemy5" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
-position = Vector2(3516, 1693)
+position = Vector2(3215, 1421)
 player_node_path = NodePath("../Monty")
 room_number = 4
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bcyp1si8y25lj"]
 
-[ext_resource type="Script" uid="uid://dahnuwpmd7fim" path="res://Assets/Player & Enemies/jaguar.gd" id="1_7qprt"]
+[ext_resource type="Script" uid="uid://c40u5dd0ysk85" path="res://Assets/Player & Enemies/jaguar.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
