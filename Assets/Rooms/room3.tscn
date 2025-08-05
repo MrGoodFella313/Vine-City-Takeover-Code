@@ -12,7 +12,7 @@
 [gd_scene format=3 uid="uid://bn5es4e8jt6ac"]
 >>>>>>> Stashed changes
 
-[ext_resource type="Texture2D" uid="uid://c3amj33cu5lvu" path="res://tilemap 7:30.PNG" id="1_f8rpw"]
+[ext_resource type="Texture2D" uid="uid://c3amj33cu5lvu" path="res://tilemap 7-30.PNG" id="1_f8rpw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb32l"]
 texture = ExtResource("1_f8rpw")
