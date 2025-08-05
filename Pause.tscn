@@ -1,54 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://4y7q3ph7bafu"]
+[gd_scene load_steps=0 format=3 uid="uid://cxilrt4ahc506"]
 
-[ext_resource type="Script" uid="uid://bqnto6s23gurx" path="res://control.gd" id="1_45vjg"]
-[ext_resource type="PackedScene" uid="uid://p62vs7tmt2ew" path="res://Assets/Music/MusicSlider.tscn" id="2_aq7p1"]
-
-[node name="Pause" type="Control"]
-process_mode = 3
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_45vjg")
-
-[node name="MusicSlider" parent="." instance=ExtResource("2_aq7p1")]
-z_index = 3
-position = Vector2(447, 515)
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = -2.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.0784314, 1, 0.458824)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -803.0
-offset_top = -198.0
-offset_right = 798.0
-offset_bottom = -164.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Unpause"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Sound" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
