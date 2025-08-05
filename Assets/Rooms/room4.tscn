@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3amj33cu5lvu" path="res://tilemap 7-30.PNG" id="1_mslli"]
 [ext_resource type="Texture2D" uid="uid://bmho5foo6mwh1" path="res://tilemap 7.30.PNG" id="2_ni5ve"]
-[ext_resource type="Script" uid="uid://bnppll5a3a1am" path="res://Assets/Rooms/room4.gd" id="3_ni5ve"]
+[ext_resource type="Script" uid="uid://c18ot3upnx0n0" path="res://Assets/Rooms/room4.gd" id="3_ni5ve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyf0d"]
 texture = ExtResource("1_mslli")
@@ -326,6 +326,7 @@ texture = ExtResource("1_mslli")
 20:15/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_d7xmh"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yyf0d")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrj4v"]
@@ -632,7 +633,9 @@ texture = ExtResource("1_mslli")
 7:18/0 = 0
 8:18/0 = 0
 9:18/0 = 0
+9:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -0.890301, -0.296768, -6.92456, 6.33103, -3.5612, 6.42995, 3.95689, 2.6709, 8)
 10:18/0 = 0
+10:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.44073, 8, -6.42995, -1.7806, 0.395689, -5.53965, 5.73749, -3.75905, 6.33103, 3.16551, 2.37413, 8)
 13:18/0 = 0
 14:18/0 = 0
 15:18/0 = 0
@@ -643,11 +646,15 @@ texture = ExtResource("1_mslli")
 7:19/0 = 0
 8:19/0 = 0
 9:19/0 = 0
+9:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.95689, -8, -3.06659, 2.17629, -0.692457, 6.92456, 3.66012, 6.2321, 6.52887, -3.26444, 3.16551, -8)
 10:19/0 = 0
+10:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.96767, -8, -0.989223, 5.14396, 3.5612, 5.04504, 6.82564, -3.95689, 2.6709, -8)
 13:19/0 = 0
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_34bh5"]
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_vrj4v")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aeoil"]
@@ -879,6 +886,7 @@ texture = ExtResource("2_ni5ve")
 8:12/0 = 0
 9:12/0 = 0
 10:12/0 = 0
+10:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:12/0 = 0
 12:12/0 = 0
 13:12/0 = 0
@@ -952,7 +960,9 @@ texture = ExtResource("2_ni5ve")
 5:18/0 = 0
 6:18/0 = 0
 7:18/0 = 0
+7:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.78476, -8, -6.83864, 5.0584, -4.68338, 5.16616, -4.95279, 7.05201, -3.55187, 8, 3.93766, 8, 4.79977, 7.1059, 4.96141, 5.27392, 6.90115, 5.11228, 7.06279, -8)
 8:18/0 = 0
+8:18/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.95703, -8, -6.91721, 5.00434, -4.90241, 5.27192, -4.94223, 6.94428, -4.02641, 7.18319, -4.02641, 8, 3.8974, 8, 3.85758, 7.38228, 4.97249, 7.14337, 5.09194, 5.11265, 6.95384, 5.12221, 7.03985, -8)
 9:18/0 = 0
 10:18/0 = 0
 13:18/0 = 0
@@ -963,7 +973,9 @@ texture = ExtResource("2_ni5ve")
 5:19/0 = 0
 6:19/0 = 0
 7:19/0 = 0
+7:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.80639, -8, -3.86681, -5.07518, -6.04189, -5.07518, -5.92105, 6.04189, 5.98147, 6.28356, 6.04189, -4.83351, 4.04806, -4.83351, 3.92723, -8)
 8:19/0 = 0
+8:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.9015, -8, -3.80258, -4.46338, -5.58318, -4.46338, -5.58318, 6.22023, 5.89181, 6.41807, 6.18858, -4.36446, 4.21013, -4.76015, 3.81444, -8)
 9:19/0 = 0
 10:19/0 = 0
 13:19/0 = 0
@@ -1289,6 +1301,7 @@ texture = ExtResource("1_mslli")
 14:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_k2qfv"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_aeoil")
 sources/1 = SubResource("TileSetAtlasSource_e2rwn")
 
@@ -1325,19 +1338,23 @@ tile_set = SubResource("TileSet_k2qfv")
 script = ExtResource("3_ni5ve")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1039.5, 503.5)
+position = Vector2(1041, 504)
 shape = SubResource("RectangleShape2D_yyf0d")
+debug_color = Color(0, 0.6, 0.701961, 0.0392157)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(522.5, 526.5)
 shape = SubResource("RectangleShape2D_d7xmh")
+debug_color = Color(0, 0.6, 0.701961, 0.0392157)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-25, 110)
 shape = SubResource("RectangleShape2D_vrj4v")
+debug_color = Color(0, 0.6, 0.701961, 0.0392157)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(433.5, 169.75)
 shape = SubResource("RectangleShape2D_34bh5")
+debug_color = Color(0, 0.6, 0.701961, 0.0392157)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

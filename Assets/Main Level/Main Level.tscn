@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
+[ext_resource type="Script" uid="uid://cx7mujfhqgp4h" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://dbokxlmk8rq8t" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
 [ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
@@ -16,6 +17,10 @@
 
 [node name="Room 1" parent="." instance=ExtResource("2_gmw17")]
 position = Vector2(455, 631)
+
+[node name="TileMapLayer2" parent="Room 1" index="1"]
+position = Vector2(0, -2)
+script = ExtResource("2_a584n")
 
 [node name="Room 2" parent="." instance=ExtResource("3_h64rl")]
 position = Vector2(-27, 1013)
@@ -74,7 +79,7 @@ position = Vector2(884, 1873)
 position = Vector2(1054, 2297)
 
 [node name="enemy2" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
-position = Vector2(3470, 1381)
+position = Vector2(3470, 1388)
 player_node_path = NodePath("../Monty")
 room_number = 4
 
@@ -102,3 +107,5 @@ room_number = 3
 
 [editable path="Room 1"]
 [editable path="Room 2"]
+[editable path="Room 3"]
+[editable path="Room 4"]
