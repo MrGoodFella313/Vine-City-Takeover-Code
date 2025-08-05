@@ -164,6 +164,8 @@ func _on_jaguar_killed():
 	
 	if jaguars_killed_count >= JAGUARS_TO_KILL:
 		print("You Win! You defeated all the jaguars!")
+		get_tree().change_scene_to_file("res://Win_Screen.tscn")
+
 		# Add game ending logic here
 
 func update_room(room: int):

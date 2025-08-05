@@ -43,6 +43,10 @@ position = Vector2(868, 940)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("7_22750")]
+visible = false
+
+[node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
+position = Vector2(487, 414)
 
 [node name="HealthUI" parent="CanvasLayer" node_paths=PackedStringArray("Monty") instance=ExtResource("7_6dbim")]
 offset_left = 68.0
@@ -62,9 +66,6 @@ offset_bottom = 37.0
 grow_horizontal = 0
 grow_vertical = 1
 scale = Vector2(3.17457, 2.58032)
-
-[node name="MusicSlider" parent="." instance=ExtResource("8_26cu8")]
-position = Vector2(693, 550)
 
 [node name="passionfruit" parent="." instance=ExtResource("9_sqmis")]
 position = Vector2(1830, 1297)

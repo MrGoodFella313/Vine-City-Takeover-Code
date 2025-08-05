@@ -4,7 +4,6 @@
 
 [node name="pause" type="Control"]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,12 +17,32 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = 4.0
+offset_right = -41.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.301961, 0.796078, 0, 0.301961)
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 745.0
+offset_top = 563.0
+offset_right = 855.0
+offset_bottom = 598.0
+color = Color(0, 0, 0, 0.643137)
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+layout_mode = 2
+offset_top = 5.0
+offset_right = 113.0
+offset_bottom = 28.0
+text = "Music Volume"
+
 [node name="GridContainer" type="GridContainer" parent="."]
+process_mode = 3
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,15 +67,24 @@ process_mode = 3
 layout_mode = 2
 text = "Resume"
 
-[node name="SettingsBtn" type="Button" parent="GridContainer"]
-process_mode = 2
+[node name="MainMenUBTN" type="Button" parent="GridContainer"]
+process_mode = 3
 layout_mode = 2
-text = "Settings"
+text = "Main Menu"
 
 [node name="QuitBtn" type="Button" parent="GridContainer"]
 process_mode = 3
 layout_mode = 2
 text = "Quit"
 
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 609.0
+offset_right = 1159.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 0.796078)
+
 [connection signal="pressed" from="GridContainer/Resumebtn" to="." method="_on_resumebtn_pressed"]
+[connection signal="pressed" from="GridContainer/MainMenUBTN" to="." method="_on_main_men_ubtn_pressed"]
 [connection signal="pressed" from="GridContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]
