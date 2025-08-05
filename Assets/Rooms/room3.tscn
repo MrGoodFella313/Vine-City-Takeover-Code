@@ -1,16 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene load_steps=8 format=4 uid="uid://bv75apys5qobo"]
-=======
-[gd_scene format=3 uid="uid://bn5es4e8jt6ac"]
->>>>>>> Stashed changes
-=======
-[gd_scene format=3 uid="uid://bn5es4e8jt6ac"]
->>>>>>> Stashed changes
-=======
-[gd_scene format=3 uid="uid://bn5es4e8jt6ac"]
->>>>>>> Stashed changes
+
 
 [ext_resource type="Texture2D" uid="uid://c3amj33cu5lvu" path="res://tilemap 7-30.PNG" id="1_f8rpw"]
 
