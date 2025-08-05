@@ -7,25 +7,18 @@
 radius = 56.6667
 
 [node name="RigidBody2D" type="RigidBody2D" groups=["Projectile"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_cn8fl")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.01024, -7.33403)
+scale = Vector2(0.300768, 0.275026)
+shape = SubResource("CircleShape2D_3rnyv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.22535, -2.09376)
 scale = Vector2(0.129852, 0.129852)
 texture = ExtResource("2_cn8fl")
-
-[node name="Area2D" type="Area2D" parent="." groups=["Projectile"]]
-scale = Vector2(1.00256, 0.916754)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4, -8)
-scale = Vector2(0.3, 0.3)
-shape = SubResource("CircleShape2D_3rnyv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

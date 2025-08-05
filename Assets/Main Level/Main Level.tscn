@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=12 format=3 uid="uid://dddgvtwviupbk"]
 
-[ext_resource type="Script" uid="uid://1yuvdspr67x5" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://dbokxlmk8rq8t" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
 [ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
@@ -18,10 +17,6 @@
 [node name="Room 1" parent="." instance=ExtResource("2_gmw17")]
 position = Vector2(455, 631)
 
-[node name="TileMapLayer2" parent="Room 1" index="1"]
-position = Vector2(0, -2)
-script = ExtResource("2_a584n")
-
 [node name="Room 2" parent="." instance=ExtResource("3_h64rl")]
 position = Vector2(-27, 1013)
 rotation = -1.5708
@@ -30,7 +25,7 @@ rotation = -1.5708
 position = Vector2(1223, 1672)
 
 [node name="Room 4" parent="." instance=ExtResource("4_djff6")]
-position = Vector2(2372, 984)
+position = Vector2(2374, 984)
 
 [node name="enemy" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(1042, 1015)
