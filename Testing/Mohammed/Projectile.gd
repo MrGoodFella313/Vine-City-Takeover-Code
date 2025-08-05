@@ -20,6 +20,7 @@ extends RigidBody2D
 
 @export var move_speed := 1000.0
 @export var direction := Vector2.ZERO
+@export var despawn_time: int = 2
 #@export var vine_tilemap_path: NodePath
 
 @export var destructible_tile_layer: int = 2
@@ -32,6 +33,7 @@ func _ready():
 	gravity_scale = 0
 	#vine_tilemap = get_node_or_null(vine_tilemap_path)
 	add_to_group("Projectile")
+	get_tree().create_timer(despawn_time).timeout.connect(queue_free)
 
 func _physics_process(delta):
 	if get_physics_process_delta_time() > 0: # Ensures it only runs on the first frame.

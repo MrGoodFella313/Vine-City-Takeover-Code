@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b7jt1okhhflq8" path="res://Assets/Spites/Front facing monkey sprite.png" id="2_r7rd1"]
 [ext_resource type="PackedScene" uid="uid://dg3glj07la5rl" path="res://Testing/Mohammed/FireProjectile.tscn" id="3_flq2q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xoil"]
-size = Vector2(85.8544, 126.75)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gixqa"]
+radius = 28.9509
+height = 119.068
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 scale = Vector2(0.500848, 0.520711)
@@ -20,8 +21,8 @@ scale = Vector2(0.102783, 0.102783)
 texture = ExtResource("2_r7rd1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.998309, -1.92045)
-shape = SubResource("RectangleShape2D_2xoil")
+position = Vector2(1.99661, 5.76135)
+shape = SubResource("CapsuleShape2D_gixqa")
 
 [node name="Node2D" type="Node2D" parent="."]
 
