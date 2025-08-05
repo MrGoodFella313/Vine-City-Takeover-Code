@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=11 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="PackedScene" uid="uid://bv75apys5qobo" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dhq8uip27dptv" path="res://Assets/UI/HealthUI.tscn" id="7_6dbim"]
 [ext_resource type="PackedScene" uid="uid://p62vs7tmt2ew" path="res://Assets/Music/MusicSlider.tscn" id="8_26cu8"]
 [ext_resource type="PackedScene" uid="uid://cs0oe8oqtshyu" path="res://Testing/Luis/PassionFruit.tscn" id="9_sqmis"]
+[ext_resource type="PackedScene" uid="uid://cvhsbe3bby5ex" path="res://Testing/kill_count_ui.tscn" id="10_22750"]
 
 [node name="MainLevel" type="Node2D"]
 
@@ -29,7 +30,7 @@ position = Vector2(2372, 984)
 position = Vector2(1042, 1015)
 player_node_path = NodePath("../Monty")
 
-[node name="Monty" parent="." groups=["Monty", "enemies"] instance=ExtResource("6_6dbim")]
+[node name="Monty" parent="." groups=["Monty", "enemies", "player"] instance=ExtResource("6_6dbim")]
 position = Vector2(868, 940)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -40,6 +41,18 @@ offset_top = 487.0
 offset_right = 68.0
 offset_bottom = 487.0
 Monty = NodePath("../../Monty")
+
+[node name="KillCountUI" parent="CanvasLayer" instance=ExtResource("10_22750")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -465.0
+offset_top = 37.0
+offset_right = -465.0
+offset_bottom = 37.0
+grow_horizontal = 0
+grow_vertical = 1
+scale = Vector2(3.17457, 2.58032)
 
 [node name="MusicSlider" parent="." instance=ExtResource("8_26cu8")]
 position = Vector2(693, 550)
@@ -75,6 +88,8 @@ player_node_path = NodePath("../Monty")
 [node name="enemy6" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(1100, 2067)
 player_node_path = NodePath("../Monty")
+
+[connection signal="kill_count_updated" from="Monty" to="Monty" method="_on_kill_count_updated"]
 
 [editable path="Node2D"]
 [editable path="Node2D2"]
