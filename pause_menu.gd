@@ -20,10 +20,10 @@ func _on_resumebtn_pressed() -> void:
 	print("resume")
 	_is_paused = false
 	
-	
-func _on_settingbtn_pressed() -> void:
-	pass
-	
 func _on_quit_btn_pressed() -> void:
 	print("quit")
 	get_tree().quit()
+
+func _on_main_men_ubtn_pressed() -> void:
+	_is_paused = false
+	get_tree().change_scene_to_file("res://main_menu.tscn")

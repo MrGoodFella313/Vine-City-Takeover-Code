@@ -43,6 +43,10 @@ position = Vector2(868, 940)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("7_22750")]
+visible = false
+
+[node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
+position = Vector2(487, 414)
 
 [node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
 position = Vector2(693, 550)
