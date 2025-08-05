@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpqovxfl31fcr"]
 
 [ext_resource type="Texture2D" uid="uid://qe0eq85wq4lg" path="res://Basic Background.jpg" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://bwhi1nyywbgy7" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://chkvp7ay2xph8" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://dh0osppxjiqxj" path="res://DM Bubble Pop Bold.ttf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
@@ -67,7 +67,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
 text = "Start Game
 "
 
-[node name="Options" type="Button" parent="VBoxContainer"]
+[node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.590072, 0.718138, 0.986272, 1)
@@ -79,7 +79,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nlkkf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
-text = "Options
+text = "Credits
 "
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
@@ -114,5 +114,5 @@ theme_override_font_sizes/font_size = 100
 text = "Vine City Takeover"
 
 [connection signal="pressed" from="VBoxContainer/Start Game" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

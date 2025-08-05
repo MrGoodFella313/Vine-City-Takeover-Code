@@ -1,4 +1,17 @@
-[gd_scene load_steps=0 format=3 uid="uid://yt8wanwea43b"]
+[gd_scene load_steps=4 format=3 uid="uid://yt8wanwea43b"]
+
+[ext_resource type="Script" uid="uid://bifg048k5txir" path="res://back_button.gd" id="1_nm7lk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5rx0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nm7lk"]
+bg_color = Color(0.295857, 0.402419, 0.934784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
 
 [node name="Credits" type="Node2D"]
 
@@ -22,3 +35,24 @@ Frankie, Mexly, Andrew, and Isa
 MUSIC:
 Rex and Aniya"
 horizontal_alignment = 1
+
+[node name="Back Button" type="Button" parent="."]
+offset_left = 67.0
+offset_top = 728.0
+offset_right = 448.0
+offset_bottom = 824.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.590072, 0.718138, 0.986272, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t5rx0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nm7lk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nm7lk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nm7lk")
+text = "Back
+"
+script = ExtResource("1_nm7lk")
+
+[connection signal="pressed" from="Back Button" to="Back Button" method="_on_pressed"]
