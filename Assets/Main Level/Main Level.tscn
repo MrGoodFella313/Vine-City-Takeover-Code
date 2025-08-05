@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
-[ext_resource type="Script" uid="uid://cx7mujfhqgp4h" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
+[ext_resource type="Script" uid="uid://1yuvdspr67x5" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://dbokxlmk8rq8t" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
 [ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
@@ -44,6 +44,9 @@ position = Vector2(868, 940)
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("7_22750")]
 
+[node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
+position = Vector2(693, 550)
+
 [node name="HealthUI" parent="CanvasLayer" node_paths=PackedStringArray("Monty") instance=ExtResource("7_6dbim")]
 offset_left = 68.0
 offset_top = 487.0
@@ -62,9 +65,6 @@ offset_bottom = 37.0
 grow_horizontal = 0
 grow_vertical = 1
 scale = Vector2(3.17457, 2.58032)
-
-[node name="MusicSlider" parent="." instance=ExtResource("8_26cu8")]
-position = Vector2(693, 550)
 
 [node name="passionfruit" parent="." instance=ExtResource("9_sqmis")]
 position = Vector2(1830, 1297)
