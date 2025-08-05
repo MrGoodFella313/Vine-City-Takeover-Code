@@ -48,9 +48,6 @@ visible = false
 [node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
 position = Vector2(487, 414)
 
-[node name="MusicSlider" parent="CanvasLayer/Control" instance=ExtResource("8_26cu8")]
-position = Vector2(693, 550)
-
 [node name="HealthUI" parent="CanvasLayer" node_paths=PackedStringArray("Monty") instance=ExtResource("7_6dbim")]
 offset_left = 68.0
 offset_top = 487.0
