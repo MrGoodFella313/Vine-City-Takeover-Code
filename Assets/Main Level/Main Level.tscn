@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dddgvtwviupbk"]
 
-[ext_resource type="PackedScene" uid="uid://bv75apys5qobo" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
+[ext_resource type="PackedScene" path="res://Assets/Rooms/room3.tscn" id="1_djff6"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://bf2wbf11lx4s4" path="res://Assets/Rooms/room2.tscn" id="3_h64rl"]
 [ext_resource type="PackedScene" uid="uid://c1c1xgyes5ddt" path="res://Assets/Rooms/room4.tscn" id="4_djff6"]
@@ -36,7 +36,6 @@ position = Vector2(868, 940)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource("7_22750")]
-visible = false
 
 [node name="HealthUI" parent="CanvasLayer" node_paths=PackedStringArray("Monty") instance=ExtResource("7_6dbim")]
 offset_left = 68.0
