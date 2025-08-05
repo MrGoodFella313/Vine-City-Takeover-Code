@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bf2wbf11lx4s4"]
+[gd_scene load_steps=11 format=4 uid="uid://bf2wbf11lx4s4"]
 
 [ext_resource type="Texture2D" uid="uid://bmho5foo6mwh1" path="res://tilemap 7.30.PNG" id="1_pvrei"]
+[ext_resource type="Script" uid="uid://gn03iu7necvg" path="res://Assets/Rooms/room2.gd" id="2_622kl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_622kl"]
 texture = ExtResource("1_pvrei")
@@ -968,6 +969,12 @@ texture = ExtResource("1_pvrei")
 [sub_resource type="TileSet" id="TileSet_l7ir1"]
 sources/0 = SubResource("TileSetAtlasSource_dwo14")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvrei"]
+size = Vector2(1053, 568)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_622kl"]
+size = Vector2(188, 262)
+
 [node name="Node2D3" type="Node2D"]
 position = Vector2(0, 1)
 
@@ -990,3 +997,16 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD4////AAAHABIAAFD3////AAAHABMAAFACAPz/AAAHABIAAFABAPz/AAAHABMAAFAIAAAAAAAHABIAAFAHAAAAAAAHABMAAFADAAMAAAAHABIAAFACAAMAAAAHABMAAFD7/wIAAAAPAAwAAFD7/wMAAAAQAAwAAFD6/wIAAAAPAA0AAFD6/wMAAAAQAA0AAFAHAPz/AAANAAwAAFAHAP3/AAAOAAwAAFAGAPz/AAANAA0AAFAGAP3/AAAOAA0AAFD9//z/AAAMAAwAAFAGAAIAAAALAAwAAFA=")
 tile_set = SubResource("TileSet_l7ir1")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Room"]]
+script = ExtResource("2_622kl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -3)
+shape = SubResource("RectangleShape2D_pvrei")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 395)
+shape = SubResource("RectangleShape2D_622kl")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

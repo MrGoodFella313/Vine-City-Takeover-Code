@@ -15,6 +15,8 @@ var current_projectile_scene: PackedScene
 @export var shoot_cooldown := 0.2
 @export var offset_distance := 80
 
+var current_room: int = 1
+
 var can_shoot = true
 var shoot_timer: Timer
 
@@ -126,21 +128,21 @@ func heal(amount: int):
 
 
 # Test Function To remove later
-func _unhandled_input(event):
-	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		if event.keycode == KEY_V:
-			take_damage(2) # -1 heart (2 health points)
-		if event.keycode == KEY_B:
-			take_damage(1) # -0.5 heart (1 health point)
-		if event.keycode == KEY_N:
-			heal(1) # +0.5 heart (1 health point)
-		if event.keycode == KEY_M:
-			heal(2) # +1 heart (2 health points)
-		if event.keycode == KEY_H:
-			# Set health directly to max and emit the signal
-			current_health = max_health
-			health_changed.emit(current_health)
-			print("Player health restored to maximum.")
+#func _unhandled_input(event):
+	#if event is InputEventKey and event.is_pressed() and not event.is_echo():
+		#if event.keycode == KEY_V:
+			#take_damage(2) # -1 heart (2 health points)
+		#if event.keycode == KEY_B:
+			#take_damage(1) # -0.5 heart (1 health point)
+		#if event.keycode == KEY_N:
+			#heal(1) # +0.5 heart (1 health point)
+		#if event.keycode == KEY_M:
+			#heal(2) # +1 heart (2 health points)
+		#if event.keycode == KEY_H:
+			## Set health directly to max and emit the signal
+			#current_health = max_health
+			#health_changed.emit(current_health)
+			#print("Player health restored to maximum.")
 
 func switch_projectile_type():
 	is_fire_banana_mode = not is_fire_banana_mode
@@ -163,3 +165,7 @@ func _on_jaguar_killed():
 	if jaguars_killed_count >= JAGUARS_TO_KILL:
 		print("You Win! You defeated all the jaguars!")
 		# Add game ending logic here
+
+func update_room(room: int):
+	current_room = room
+	print("Room : ", current_room)

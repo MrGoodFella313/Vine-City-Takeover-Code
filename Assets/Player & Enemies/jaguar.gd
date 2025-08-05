@@ -18,6 +18,7 @@ var _theta : float
 
 # Assign the player node in the inspector. The jaguar will chase this target.
 @export var player_node_path: NodePath
+@export var room_number: int # The room the jaguar will stay in
 
 var current_state: State = State.CHASE
 var player_in_range: bool = false
@@ -63,7 +64,7 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			
 		State.CHASE:
-			if player_reference:
+			if player_reference && room_number == player_reference.current_room:
 				var direction = (player_reference.global_position - global_position).normalized()
 				velocity = direction * speed
 				_theta = wrapf(atan2(direction.y, direction.x) - rotation, -PI,PI)
@@ -136,11 +137,11 @@ func change_state(new_state: State) -> void:
 			cooldown_time_left = cooldown_duration
 			# animation_player.play("idle")
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.is_pressed() and not event.is_echo():
-		if event.keycode == KEY_J:
-			# Force the jaguar into the attack state for testing.
-			change_state(State.ATTACK)
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventKey and event.is_pressed() and not event.is_echo():
+		#if event.keycode == KEY_J:
+			## Force the jaguar into the attack state for testing.
+			#change_state(State.ATTACK)
 
 # --- Signal Handler Functions ---
 

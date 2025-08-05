@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://dbokxlmk8rq8t"]
+[gd_scene load_steps=12 format=4 uid="uid://dbokxlmk8rq8t"]
 
 [ext_resource type="Texture2D" uid="uid://c3amj33cu5lvu" path="res://tilemap 7-30.PNG" id="1_f8rpw"]
+[ext_resource type="Script" uid="uid://bihpkrj220phv" path="res://Assets/Rooms/room3.gd" id="2_wb32l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb32l"]
 texture = ExtResource("1_f8rpw")
@@ -968,6 +969,15 @@ texture = ExtResource("1_f8rpw")
 [sub_resource type="TileSet" id="TileSet_uum77"]
 sources/0 = SubResource("TileSetAtlasSource_20lj3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5kqa"]
+size = Vector2(378.5, 550)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2huy"]
+size = Vector2(450, 653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlp6m"]
+size = Vector2(188, 161)
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="floor" type="TileMapLayer" parent="."]
@@ -987,3 +997,20 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD4/wYAAAAFABIAAAD4/wcAAAAFABMAAAD1/w0AAAAFABIAAAD1/w4AAAAFABMAAAABAAgAAAAFABIAAAD0/wQAAAAJABIAAAD0/wUAAAAJABMAAAD2/wQAAAAJABIAAAD2/wUAAAAJABMAAAD6/w0AAAAJABIAAAD6/w4AAAAJABMAAAABAAEAAAAJABIAAAABAAIAAAAJABMAAAD2/w4AAAAJABIAAAD2/w8AAAAJABMAAAD//woAAAANABIAAAD//wsAAAANABMAAAAAAAsAAAAOABMAAAA=")
 tile_set = SubResource("TileSet_uum77")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Room"]]
+script = ExtResource("2_wb32l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.25, 288)
+shape = SubResource("RectangleShape2D_u5kqa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-389, 478.5)
+shape = SubResource("RectangleShape2D_o2huy")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -60.5)
+shape = SubResource("RectangleShape2D_rlp6m")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

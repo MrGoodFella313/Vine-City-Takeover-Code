@@ -14,22 +14,23 @@
 
 [node name="MainLevel" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("2_gmw17")]
+[node name="Room 1" parent="." instance=ExtResource("2_gmw17")]
 position = Vector2(455, 631)
 
-[node name="Node2D2" parent="." instance=ExtResource("3_h64rl")]
+[node name="Room 2" parent="." instance=ExtResource("3_h64rl")]
 position = Vector2(-27, 1013)
 rotation = -1.5708
 
-[node name="Node2D3" parent="." instance=ExtResource("3_guh6t")]
+[node name="Room 3" parent="." instance=ExtResource("3_guh6t")]
 position = Vector2(1223, 1672)
 
-[node name="Node2D4" parent="." instance=ExtResource("4_djff6")]
+[node name="Room 4" parent="." instance=ExtResource("4_djff6")]
 position = Vector2(2372, 984)
 
 [node name="enemy" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(1042, 1015)
 player_node_path = NodePath("../Monty")
+room_number = 1
 
 [node name="Monty" parent="." groups=["Monty", "enemies", "player"] instance=ExtResource("6_6dbim")]
 position = Vector2(868, 940)
@@ -73,26 +74,31 @@ position = Vector2(884, 1873)
 position = Vector2(1054, 2297)
 
 [node name="enemy2" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
-position = Vector2(761, 1203)
+position = Vector2(3470, 1381)
 player_node_path = NodePath("../Monty")
+room_number = 4
 
 [node name="enemy3" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(-62, 913)
 player_node_path = NodePath("../Monty")
+room_number = 2
 
 [node name="enemy4" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(-17, 1242)
 player_node_path = NodePath("../Monty")
+room_number = 2
 
 [node name="enemy5" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
-position = Vector2(1317, 1040)
+position = Vector2(3516, 1693)
 player_node_path = NodePath("../Monty")
+room_number = 4
 
 [node name="enemy6" parent="." groups=["enemies"] instance=ExtResource("6_h64rl")]
 position = Vector2(1100, 2067)
 player_node_path = NodePath("../Monty")
+room_number = 3
 
 [connection signal="kill_count_updated" from="Monty" to="Monty" method="_on_kill_count_updated"]
 
-[editable path="Node2D"]
-[editable path="Node2D2"]
+[editable path="Room 1"]
+[editable path="Room 2"]
