@@ -49,7 +49,7 @@ func _ready() -> void:
 	player_detector.body_exited.connect(_on_player_detector_body_exited)
 	
 	# The hurtbox checks for projectiles.
-	#hurtbox.area_entered.connect(_on_hurtbox_area_entered)
+	hurtbox.area_entered.connect(_on_hurtbox_area_entered)
 	
 	attack_hitbox.body_entered.connect(_on_tail_hitbox_area_entered)
 	
@@ -109,7 +109,7 @@ func change_state(new_state: State) -> void:
 	if current_state == new_state:
 		return
 	
-	#print("Jaguar state changed from %s to %s" % [State.keys()[current_state], State.keys()[new_state]])
+	print("Jaguar state changed from %s to %s" % [State.keys()[current_state], State.keys()[new_state]])
 
 	current_state = new_state
 	
@@ -158,21 +158,20 @@ func _on_player_detector_body_exited(body: Node) -> void:
 		player_in_range = false
 		# The state machine will transition to CHASE after the current action finishes.
 
-#func _on_hurtbox_area_entered(area: Area2D) -> void:
-	#print(area.get_groups())
-	## Check if the area that hit the jaguar is in the "projectiles" group.
-	#if area.is_in_group("Projectile"):
-		#var damage_amount = 1
-		#
-		#if area.is_in_group("Fire"):
-			#damage_amount = 2
-			#print("Jaguar was hit by a FIRE projectile!")
-		#else: 
-			#print("Jaguar was hit by a REGULAR projectile!")
-			#
-		#area.queue_free()
-		#take_damage(damage_amount)
-		 ## Destroy the projectile on hit.
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	print(area.get_groups())
+	# Check if the area that hit the jaguar is in the "projectiles" group.
+	if area.is_in_group("Projectile"):
+		var damage_amount = 1
+		
+		if area.is_in_group("Fire"):
+			damage_amount = 2
+			print("Jaguar was hit by a FIRE projectile!")
+		else: 
+			print("Jaguar was hit by a REGULAR projectile!")
+			
+		take_damage(damage_amount)
+		area.queue_free() # Destroy the projectile on hit.
 		
 
 
@@ -180,7 +179,7 @@ func  take_damage(amount: int):
 	current_health -= amount
 	current_health = max(current_health, 0)
 	
-	#print("Jaguar took %d damage, health is now %d" % [amount, current_health])
+	print("Jaguar took %d damage, health is now %d" % [amount, current_health])
 	
 	if current_health <= 0:
 		die()
@@ -200,19 +199,3 @@ func _on_tail_hitbox_area_entered(body: Node) -> void:
 			if body.has_method("take_damage"):
 				body.take_damage(attack_damage)
 				#print("Jaguar hit the player for %d damage!" % attack_damage")
-
-
-func _on_hurtbox_body_entered(area):
-	print(area.get_groups())
-	# Check if the area that hit the jaguar is in the "projectiles" group.
-	if area.is_in_group("Projectile"):
-		var damage_amount = 1
-		
-		if area.is_in_group("Fire"):
-			damage_amount = 2
-			print("Jaguar was hit by a FIRE projectile!")
-		else: 
-			print("Jaguar was hit by a REGULAR projectile!")
-			
-		area.queue_free()
-		take_damage(damage_amount)

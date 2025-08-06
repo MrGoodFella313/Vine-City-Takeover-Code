@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://cjrh8ky32l5sm" path="res://Testing/Mohammed/Projectile.gd" id="1_wfofm"]
 [ext_resource type="Texture2D" uid="uid://gavp58r4gubu" path="res://Assets/Projectile fire banana .PNG" id="2_wfofm"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wfofm"]
-radius = 169.02
+[sub_resource type="CircleShape2D" id="CircleShape2D_3rnyv"]
+radius = 56.6667
 
-[node name="RigidBody2D2" type="RigidBody2D" groups=["Fire", "Projectile"]]
-collision_layer = 3
-collision_mask = 7
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_wfofm")
+
+[node name="Node2D" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-3, -8)
@@ -17,10 +19,11 @@ rotation = -1.41803
 scale = Vector2(0.0853419, 0.0853419)
 texture = ExtResource("2_wfofm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -8)
-scale = Vector2(0.09, 0.09)
-shape = SubResource("CircleShape2D_wfofm")
-debug_color = Color(0.830542, 0.290186, 0.673274, 0.42)
+[node name="Area2D" type="Area2D" parent="." groups=["Fire", "Projectile"]]
+collision_layer = 2
+collision_mask = 2
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -8)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_3rnyv")
