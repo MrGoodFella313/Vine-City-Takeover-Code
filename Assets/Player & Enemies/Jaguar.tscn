@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bcyp1si8y25lj"]
 
-[ext_resource type="Script" uid="uid://bsrev8hh1t3mv" path="res://Assets/Player & Enemies/jaguar.gd" id="1_7qprt"]
+[ext_resource type="Script" uid="uid://c40u5dd0ysk85" path="res://Assets/Player & Enemies/jaguar.gd" id="1_7qprt"]
 [ext_resource type="Texture2D" uid="uid://cvaa2voayk276" path="res://Assets/Spites/Jaguar right face.png" id="2_j3nqn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0175"]
@@ -16,7 +16,6 @@ radius = 82.0244
 rotation = -6.28319
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_7qprt")
-attack_damage = 3
 
 [node name="TailCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(-148, -60)
@@ -30,6 +29,13 @@ shape = SubResource("RectangleShape2D_vlvh4")
 position = Vector2(-22, -10)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_j3nqn")
+
+[node name="Player Detector" type="Area2D" parent="."]
+
+[node name="Player Detector" type="CollisionShape2D" parent="Player Detector"]
+position = Vector2(118, 6.00002)
+shape = SubResource("CircleShape2D_j3nqn")
+debug_color = Color(0.932573, 0.230426, 0.314156, 0.42)
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 2
@@ -49,12 +55,3 @@ collision_layer = 4
 [node name="TailCollisionShape" type="CollisionShape2D" parent="TailHitbox"]
 position = Vector2(-148, -60)
 shape = SubResource("CircleShape2D_p0175")
-
-[node name="Player Detector" type="Area2D" parent="."]
-
-[node name="Player Detector" type="CollisionShape2D" parent="Player Detector"]
-position = Vector2(118, 6.00002)
-shape = SubResource("CircleShape2D_j3nqn")
-debug_color = Color(0.932573, 0.230426, 0.314156, 0.42)
-
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
