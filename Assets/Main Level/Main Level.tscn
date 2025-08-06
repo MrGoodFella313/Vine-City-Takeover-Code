@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dddgvtwviupbk"]
+[gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
 [ext_resource type="PackedScene" uid="uid://dbokxlmk8rq8t" path="res://Assets/Rooms/room3.tscn" id="3_guh6t"]
@@ -12,7 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://cs0oe8oqtshyu" path="res://Testing/Luis/PassionFruit.tscn" id="9_sqmis"]
 [ext_resource type="PackedScene" uid="uid://cvhsbe3bby5ex" path="res://Testing/kill_count_ui.tscn" id="10_22750"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_guh6t"]
+
 [node name="MainLevel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1536.63, 1657.79)
+scale = Vector2(-5617.55, 3316.57)
+texture = SubResource("CanvasTexture_guh6t")
 
 [node name="Room 1" parent="." instance=ExtResource("2_gmw17")]
 position = Vector2(455, 631)
