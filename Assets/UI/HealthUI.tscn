@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c0y8fw15iy13c" path="res://Assets/Components/playerhealth.gd" id="1_23s26"]
 [ext_resource type="Texture2D" uid="uid://oh0odqxcj0mo" path="res://Assets/Spites/Passion fruit solid full heart.png" id="2_57x5d"]
 [ext_resource type="Texture2D" uid="uid://54vkm3q8w111" path="res://Assets/Spites/Half passion fruit health.png" id="3_hc36m"]
-[ext_resource type="Texture2D" uid="uid://sw545os63pk6" path="res://Assets/Spites/empty.png" id="4_bkgh6"]
+[ext_resource type="Texture2D" uid="uid://bj2xh3vcs63oo" path="res://Assets/Spites/Passion fruit no health.png" id="4_57x5d"]
 
 [node name="HealthUI" type="Control" node_paths=PackedStringArray("hearts_container")]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchors_preset = 0
 script = ExtResource("1_23s26")
 full_heart_texture = ExtResource("2_57x5d")
 half_heart_texture = ExtResource("3_hc36m")
-empty_heart_texture = ExtResource("4_bkgh6")
+empty_heart_texture = ExtResource("4_57x5d")
 hearts_container = NodePath("HBoxContainer")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
