@@ -1,4 +1,4 @@
-
+[gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="Script" uid="uid://22hku1imfy3n" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
@@ -13,21 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cs0oe8oqtshyu" path="res://Testing/Luis/PassionFruit.tscn" id="9_sqmis"]
 [ext_resource type="PackedScene" path="res://Testing/kill_count_ui.tscn" id="10_22750"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_guh6t"]
-
-[sub_resource type="Gradient" id="Gradient_a584n"]
-offsets = PackedFloat32Array(0.84, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_bkf5w"]
-gradient = SubResource("Gradient_a584n")
-
 [node name="MainLevel" type="Node2D"]
-
-[node name="BKG" type="Sprite2D" parent="."]
-material = SubResource("CanvasItemMaterial_guh6t")
-position = Vector2(1227.25, 1498.75)
-scale = Vector2(2455.5, 2998.5)
-texture = SubResource("GradientTexture1D_bkf5w")
 
 [node name="Room 1" parent="." instance=ExtResource("2_gmw17")]
 position = Vector2(455, 631)
