@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://dddgvtwviupbk"]
 
 [ext_resource type="Script" uid="uid://22hku1imfy3n" path="res://Assets/Main Level/Vines_collision.gd" id="2_a584n"]
 =======
 [gd_scene load_steps=15 format=3 uid="uid://dddgvtwviupbk"]
+=======
+[gd_scene load_steps=12 format=3 uid="uid://dddgvtwviupbk"]
+>>>>>>> parent of a8fc844 (Added BKG)
 
 >>>>>>> parent of 672398c (Merge branch 'main' into test-game)
 [ext_resource type="PackedScene" uid="uid://c2xbw7k6omipb" path="res://Assets/Rooms/room1.tscn" id="2_gmw17"]
